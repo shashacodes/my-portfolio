@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardMedia, Typography, Chip, Dialog, Box, IconButton, Divider, Button } from '@mui/material'
 import Link from 'next/link'
 import { projects } from '../components/data/projects'
@@ -20,6 +20,12 @@ interface Project {
 export default function Projects() {
   const [openDialog, setOpenDialog] = useState(false)
   const [currentProject, setCurrentProject] = useState<Project | null>(null) 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   const handleOpenDialog = (project: Project) => {
     setCurrentProject(project)
@@ -32,7 +38,13 @@ export default function Projects() {
   }
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  if (!isClient) {
+    return null;
   }
 
 
