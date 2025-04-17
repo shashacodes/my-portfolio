@@ -16,7 +16,7 @@ export const projects = [
     title: "Atmosphere For Business",
     description: "Immersive and user-centric frontend design that captivates visitors.",
     image: "/assets/at.jpg",
-    tags: ["Next.js", "UI/UX", "Tailwind"],
+    tags: ["Next.js", "TypeScript", "Tailwind"],
     slug: "atmosphere-business",
     demo: "https://www.atmosphere.ng/",
     github: "https://github.com/shashacodes/atmosphere",
@@ -39,14 +39,14 @@ export const projects = [
     title: "Rock Paper Scissors",
     description: "A simple Rock Paper Scissors game built with JavaScript where the user plays against the computer.",
     image: "/assets/rockpaper.svg",
-    tags: ["JavaScript", "Game", "Interactive"],
+    tags: ["TypeScript", "Game", "Interactive"],
     slug: "rock-paper-scissors",
     demo: "https://rock-paper-scissors-mu-ruddy.vercel.app/",
     github: "https://github.com/shashacodes/rock-paper-scissors",
     about: "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation."
   },
   {
-    id: "4",
+    id: "5",
     title: "Job Listings Filtering",
     description: "A job listings page where users can filter jobs by categories, using local JSON data.",
     image: "/assets/job.jpeg", 
@@ -57,7 +57,7 @@ export const projects = [
     about: "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript."
   },
     {
-    id: "5",
+    id: "6",
     title: "MyNaijaMarket",
     description: "Vibrant and intuitive frontend for Nigeria's online marketplace.",
     image: "/assets/mnm.jpg",
@@ -69,7 +69,7 @@ export const projects = [
       "MyNaijaMarket is a visually compelling frontend application designed to support the vibrant e-commerce culture in Nigeria. It features a responsive UI that enhances user engagement and streamlines the online shopping experience. Built with Next.js and Tailwind CSS, the platform prioritizes speed, accessibility, and clean design architecture to reflect a modern marketplace interface.",
   },
   {
-    id: "6",
+    id: "7",
     title: "Birthday Countdown",
     description: "Fun countdown timer for birthdays using JS.",
     image: "/assets/bday.jpg",
@@ -81,7 +81,7 @@ export const projects = [
       "This countdown app adds a personal touch by allowing users to set and view the time left until a birthday. It's built with JavaScript to show real-time updates and offers fun, engaging interactions for users.",
   }, 
   {
-    id: "13",
+    id: "8",
     title: "Blog Page",
     description: "Clean blog page layout styled with Tailwind.",
     image: "/assets/blogr.jpg",
@@ -93,7 +93,7 @@ export const projects = [
       "The blog page is designed using Tailwind CSS and showcases a clean, minimalist layout ideal for content presentation. It highlights responsive design, modular components, and utility-first styling.",
   },
   {
-    id: "8",
+    id: "9",
     title: "API JSON Display",
     description: "Delivering content using JSON API in React.",
     image: "/assets/api.jpg",
@@ -105,7 +105,7 @@ export const projects = [
       "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
   },
   {
-    id: "9",
+    id: "10",
     title: "GPA Calculator",
     description: "Calculate your GPA with a JavaScript-powered tool.",
     image: "/assets/gpa.png",
@@ -117,7 +117,7 @@ export const projects = [
       "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
   },
   {
-    id: "10",
+    id: "11",
     title: "BMI Calculator",
     description: "Calculate your Body Mass Index using JavaScript.",
     image: "/assets/bmi.jpg",
@@ -129,7 +129,7 @@ export const projects = [
       "The BMI Calculator is a lightweight tool that enables users to compute their Body Mass Index based on height and weight. It applies simple formulas and DOM manipulation to present results in a readable format.",
   },
   {
-    id: "11",
+    id: "12",
     title: "Timer",
     description: "Simple countdown timer using JavaScript.",
     image: "/assets/timer.jpg",
@@ -141,7 +141,7 @@ export const projects = [
       "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
   },
   {
-    id: "12",
+    id: "13",
     title: "HTML & CSS Markup",
     description: "Basic static webpage built with only HTML and CSS.",
     image: "/assets/markup.jpg",
@@ -153,7 +153,7 @@ export const projects = [
       "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
   },
   {
-    id: "13",
+    id: "14",
     title: "React Hooks Demo",
     description: "Using useState, onChange and more in a simple form app.",
     image: "/assets/use.png",
@@ -165,7 +165,7 @@ export const projects = [
       "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
   },
   {
-    id: "14",
+    id: "15",
     title: "Signup Page",
     description: "Modern signup form created with Next.js.",
     image: "/assets/groc.jpg",
@@ -177,7 +177,7 @@ export const projects = [
       "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
   },
   {
-    id: "15",
+    id: "16",
     title: "Prompt List",
     description: "Prompt-based item list created with JS.",
     image: "/assets/groc.jpg",
@@ -189,7 +189,7 @@ export const projects = [
       "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
   },
   {
-    id: "16",
+    id: "17",
     title: "Grocery App",
     description: "User-friendly online grocery shopping frontend with dynamic features.",
     image: "/assets/groc.jpg",
@@ -201,7 +201,7 @@ export const projects = [
       "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
   },
   {
-    id: "17",
+    id: "18",
     title: "Password Generator",
     description: "JavaScript-powered password generator with customizable options.",
     image: "/assets/pw.jpg",
