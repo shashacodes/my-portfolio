@@ -150,19 +150,19 @@ export default function Projects() {
           <Divider className="my-4" />
 
           <Box className="mt-4">
-            {currentProject?.github && (
-              <Box className="flex items-center gap-2 mb-2 underline italic text-[#052E16]">
-                <GitHub />{' '}
-                <a href={currentProject.github} target="_blank" rel="noopener noreferrer">
-                 View GitHub Repository
-                </a>
-              </Box>
-            )}
             {currentProject?.demo && (
               <Box className="flex items-center gap-2 mb-2 underline italic text-[#052E16]">
                 <Web />{' '}
                 <a href={currentProject.demo} target="_blank" rel="noopener noreferrer">
                  View Website Demo
+                </a>
+              </Box>
+            )}
+            {currentProject?.github && (
+              <Box className="flex items-center gap-2 mb-2 underline italic text-[#052E16]">
+                <GitHub />{' '}
+                <a href={currentProject.github} target="_blank" rel="noopener noreferrer">
+                 View GitHub Repository
                 </a>
               </Box>
             )}
