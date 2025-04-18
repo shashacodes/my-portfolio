@@ -70,6 +70,18 @@ export const projects = [
   },
   {
     id: "7",
+    title: "Password Generator",
+    description: "JavaScript-powered password generator with customizable options.",
+    image: "/assets/pw.jpg",
+    tags: ["JavaScript", "Frontend"],
+    slug: "password-generator",
+    demo: "https://shashacodes.github.io/pwdgen/",
+    github: "https://github.com/shashacodes/pwdgen",
+    about:
+    "This project offers a client-side password generator that allows users to customize password strength by length and character types. It demonstrates core JavaScript skills, DOM manipulation, and UX design considerations for data privacy tools.",
+  },
+  {
+    id: "8",
     title: "Birthday Countdown",
     description: "Fun countdown timer for birthdays using JS.",
     image: "/assets/bday.jpg",
@@ -81,7 +93,7 @@ export const projects = [
       "This countdown app adds a personal touch by allowing users to set and view the time left until a birthday. It's built with JavaScript to show real-time updates and offers fun, engaging interactions for users.",
   }, 
   {
-    id: "8",
+    id: "9",
     title: "Blog Page",
     description: "Clean blog page layout styled with Tailwind.",
     image: "/assets/blogr.jpg",
@@ -93,31 +105,7 @@ export const projects = [
       "The blog page is designed using Tailwind CSS and showcases a clean, minimalist layout ideal for content presentation. It highlights responsive design, modular components, and utility-first styling.",
   },
   {
-    id: "9",
-    title: "API JSON Display",
-    description: "Delivering content using JSON API in React.",
-    image: "/assets/api.jpg",
-    tags: ["React", "API"],
-    slug: "json-api",
-    demo: "https://json-app.netlify.app/",
-    github: "https://github.com/shashacodes/json-app",
-    about:
-      "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
-  },
-  {
     id: "10",
-    title: "GPA Calculator",
-    description: "Calculate your GPA with a JavaScript-powered tool.",
-    image: "/assets/gpa.png",
-    tags: ["JavaScript", "Calculator"],
-    slug: "gpa-calculator",
-    demo: "https://shashacodes.github.io/javascript-project/gpa.html",
-    github: "https://github.com/shashacodes/javascript-project/blob/master/gpa.html",
-    about:
-      "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
-  },
-  {
-    id: "11",
     title: "BMI Calculator",
     description: "Calculate your Body Mass Index using JavaScript.",
     image: "/assets/bmi.jpg",
@@ -129,6 +117,18 @@ export const projects = [
       "The BMI Calculator is a lightweight tool that enables users to compute their Body Mass Index based on height and weight. It applies simple formulas and DOM manipulation to present results in a readable format.",
   },
   {
+    id: "11",
+    title: "GPA Calculator",
+    description: "Calculate your GPA with a JavaScript-powered tool.",
+    image: "/assets/gpa.png",
+    tags: ["JavaScript", "Calculator"],
+    slug: "gpa-calculator",
+    demo: "https://shashacodes.github.io/javascript-project/gpa.html",
+    github: "https://github.com/shashacodes/javascript-project/blob/master/gpa.html",
+    about:
+    "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
+  },
+  {
     id: "12",
     title: "Timer",
     description: "Simple countdown timer using JavaScript.",
@@ -138,10 +138,22 @@ export const projects = [
     demo: "https://shashacodes.github.io/javascript-project/third%20javascript.html",
     github: "https://github.com/shashacodes/javascript-project",
     about:
-      "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
+    "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
   },
   {
     id: "13",
+    title: "API JSON Display",
+    description: "Delivering content using JSON API in React.",
+    image: "/assets/api.jpg",
+    tags: ["React", "API"],
+    slug: "json-api",
+    demo: "https://json-app.netlify.app/",
+    github: "https://github.com/shashacodes/json-app",
+    about:
+      "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
+  },
+  {
+    id: "14",
     title: "HTML & CSS Markup",
     description: "Basic static webpage built with only HTML and CSS.",
     image: "/assets/markup.jpg",
@@ -153,7 +165,19 @@ export const projects = [
       "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
   },
   {
-    id: "14",
+    id: "15",
+    title: "Signup Page",
+    description: "Modern signup form created with Next.js.",
+    image: "/assets/groc.jpg",
+    tags: ["Next.js", "Form"],
+    slug: "signup-page",
+    demo: "https://signup-delta.vercel.app/",
+    github: "https://github.com/shashacodes/signup",
+    about:
+    "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
+  },
+  {
+    id: "16",
     title: "React Hooks Demo",
     description: "Using useState, onChange and more in a simple form app.",
     image: "/assets/use.png",
@@ -165,19 +189,7 @@ export const projects = [
       "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
   },
   {
-    id: "15",
-    title: "Signup Page",
-    description: "Modern signup form created with Next.js.",
-    image: "/assets/groc.jpg",
-    tags: ["Next.js", "Form"],
-    slug: "signup-page",
-    demo: "https://signup-delta.vercel.app/",
-    github: "https://github.com/shashacodes/signup",
-    about:
-      "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
-  },
-  {
-    id: "16",
+    id: "17",
     title: "Prompt List",
     description: "Prompt-based item list created with JS.",
     image: "/assets/groc.jpg",
@@ -189,7 +201,7 @@ export const projects = [
       "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
   },
   {
-    id: "17",
+    id: "18",
     title: "Grocery App",
     description: "User-friendly online grocery shopping frontend with dynamic features.",
     image: "/assets/groc.jpg",
@@ -200,18 +212,7 @@ export const projects = [
     about:
       "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
   },
-  {
-    id: "18",
-    title: "Password Generator",
-    description: "JavaScript-powered password generator with customizable options.",
-    image: "/assets/pw.jpg",
-    tags: ["JavaScript", "Frontend"],
-    slug: "password-generator",
-    demo: "https://shashacodes.github.io/pwdgen/",
-    github: "https://github.com/shashacodes/pwdgen",
-    about:
-      "This project offers a client-side password generator that allows users to customize password strength by length and character types. It demonstrates core JavaScript skills, DOM manipulation, and UX design considerations for data privacy tools.",
-  },
+
   
   
 ]
