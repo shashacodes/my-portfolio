@@ -9,10 +9,21 @@ export const projects = [
     demo: "https://techbleat.co.uk/",
     github: "https://github.com/shashacodes/techbleat",
     about:
-      "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
+    "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
   },
   {
     id: "2",
+    title: "Product List with Cart",
+    description: "A dynamic product list where users can add or remove items from a shopping cart, updating the UI in real-time.",
+    image: "/assets/groce.jpeg",
+    tags: ["TypeScript", "DOM Manipulation", "JSON", "Frontend"],
+    slug: "product-list-with-cart",
+    demo: "https://product-commerce-umber.vercel.app/",
+    github: "https://github.com/shashacodes/ProductCommerce",
+    about: "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries."
+  },
+  {
+    id: "3",
     title: "Atmosphere For Business",
     description: "Immersive and user-centric frontend design that captivates visitors.",
     image: "/assets/at.jpg",
@@ -22,17 +33,6 @@ export const projects = [
     github: "https://github.com/shashacodes/atmosphere",
     about:
       "Atmosphere for Business delivers a sleek, immersive web presence for a business-focused brand. The project emphasizes a clean layout, modern visual elements, and strong UX principles. Tailwind CSS powers the dynamic styling, while Next.js ensures fast load times and performance optimization across devices.",
-  },
-  {
-    id: "3",
-    title: "Product List with Cart",
-    description: "A dynamic product list where users can add or remove items from a shopping cart, updating the UI in real-time.",
-    image: "/assets/groce.jpeg",
-    tags: ["TypeScript", "DOM Manipulation", "JSON", "Frontend"],
-    slug: "product-list-with-cart",
-    demo: "https://product-commerce-umber.vercel.app/",
-    github: "https://github.com/shashacodes/ProductCommerce",
-    about: "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries."
   },
   {
     id: "4",
