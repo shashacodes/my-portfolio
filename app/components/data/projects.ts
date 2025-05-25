@@ -46,6 +46,17 @@ export const projects = [
     about: "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation."
   },
   {
+  id: "19",
+  title: "My Music Player",
+  description: "A sleek, responsive music player built with React, Tailwind CSS, and TypeScript.",
+  image: "/assets/music.jpeg",
+  tags: ["React", "Tailwind CSS", "TypeScript", "Audio", "Music"],
+  slug: "A simple music-player",
+  demo: "https://music-player-delta-eight.vercel.app/", 
+  github: "https://github.com/shashacodes/Music-Player",
+  about: "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling."
+},
+  {
     id: "5",
     title: "Job Listings Filtering",
     description: "A job listings page where users can filter jobs by categories, using local JSON data.",
@@ -164,42 +175,42 @@ export const projects = [
     about:
       "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
   },
-  {
-    id: "15",
-    title: "Signup Page",
-    description: "Modern signup form created with Next.js.",
-    image: "/assets/groc.jpg",
-    tags: ["Next.js", "Form"],
-    slug: "signup-page",
-    demo: "https://signup-delta.vercel.app/",
-    github: "https://github.com/shashacodes/signup",
-    about:
-    "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
-  },
-  {
-    id: "16",
-    title: "React Hooks Demo",
-    description: "Using useState, onChange and more in a simple form app.",
-    image: "/assets/use.png",
-    tags: ["React", "Hooks"],
-    slug: "react-hooks-demo",
-    demo: "https://json-app.netlify.app/better",
-    github: "https://github.com/shashacodes/json-app",
-    about:
-      "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
-  },
-  {
-    id: "17",
-    title: "Prompt List",
-    description: "Prompt-based item list created with JS.",
-    image: "/assets/groc.jpg",
-    tags: ["JavaScript", "Array"],
-    slug: "prompt-list",
-    demo: "https://shashacodes.github.io/javascript-project/array.html",
-    github: "https://github.com/shashacodes/javascript-project",
-    about:
-      "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
-  },
+  // {
+  //   id: "15",
+  //   title: "Signup Page",
+  //   description: "Modern signup form created with Next.js.",
+  //   image: "/assets/groc.jpg",
+  //   tags: ["Next.js", "Form"],
+  //   slug: "signup-page",
+  //   demo: "https://signup-delta.vercel.app/",
+  //   github: "https://github.com/shashacodes/signup",
+  //   about:
+  //   "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
+  // },
+  // {
+  //   id: "16",
+  //   title: "React Hooks Demo",
+  //   description: "Using useState, onChange and more in a simple form app.",
+  //   image: "/assets/use.png",
+  //   tags: ["React", "Hooks"],
+  //   slug: "react-hooks-demo",
+  //   demo: "https://json-app.netlify.app/better",
+  //   github: "https://github.com/shashacodes/json-app",
+  //   about:
+  //     "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
+  // },
+  // {
+  //   id: "17",
+  //   title: "Prompt List",
+  //   description: "Prompt-based item list created with JS.",
+  //   image: "/assets/groc.jpg",
+  //   tags: ["JavaScript", "Array"],
+  //   slug: "prompt-list",
+  //   demo: "https://shashacodes.github.io/javascript-project/array.html",
+  //   github: "https://github.com/shashacodes/javascript-project",
+  //   about:
+  //     "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
+  // },
   {
     id: "18",
     title: "Grocery App",
