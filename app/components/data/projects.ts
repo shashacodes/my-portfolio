@@ -9,7 +9,7 @@ export const projects = [
     demo: "https://techbleat.co.uk/",
     github: "https://github.com/shashacodes/techbleat",
     about:
-    "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
+      "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
   },
   {
     id: "2",
@@ -20,7 +20,8 @@ export const projects = [
     slug: "product-list-with-cart",
     demo: "https://product-commerce-umber.vercel.app/",
     github: "https://github.com/shashacodes/ProductCommerce",
-    about: "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries."
+    about:
+      "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries.",
   },
   {
     id: "3",
@@ -43,32 +44,47 @@ export const projects = [
     slug: "rock-paper-scissors",
     demo: "https://rock-paper-scissors-mu-ruddy.vercel.app/",
     github: "https://github.com/shashacodes/rock-paper-scissors",
-    about: "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation."
+    about:
+      "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation.",
   },
   {
-  id: "19",
-  title: "My Music Player",
-  description: "A sleek, responsive music player built with React, Tailwind CSS, and TypeScript.",
-  image: "/assets/music.jpeg",
-  tags: ["React", "Tailwind CSS", "TypeScript", "Audio", "Music"],
-  slug: "A simple music-player",
-  demo: "https://music-player-delta-eight.vercel.app/", 
-  github: "https://github.com/shashacodes/Music-Player",
-  about: "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling."
-},
-  {
     id: "5",
+    title: "My Music Player",
+    description: "A sleek, responsive music player built with React, Tailwind CSS, and TypeScript.",
+    image: "/assets/music.jpeg",
+    tags: ["React", "Tailwind CSS", "TypeScript", "Audio", "Music"],
+    slug: "A simple music-player",
+    demo: "https://music-player-delta-eight.vercel.app/",
+    github: "https://github.com/shashacodes/Music-Player",
+    about:
+      "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling.",
+  },
+  {
+    id: "6",
+    title: "MyFlo App",
+    description: "A modern menstrual cycle and period tracker app built with TypeScript, Next.js, and Tailwind CSS.",
+    image: "/assets/period.jpeg",
+    tags: ["TypeScript", "Next.js", "Tailwind CSS", "React"],
+    slug: "myfloapp",
+    demo: "https://my-flo-app.vercel.app/",
+    github: "https://github.com/shashacodes/My-flo-app",
+    about:
+      "MyFlo App helps users track their menstrual cycles, period days, ovulation, and safe days with an interactive calendar interface. Built using React and Next.js with TypeScript for type safety and Tailwind CSS for responsive styling. The app visually highlights period days, ovulation, and safe days to assist with cycle awareness.",
+  },
+  {
+    id: "7",
     title: "Job Listings Filtering",
     description: "A job listings page where users can filter jobs by categories, using local JSON data.",
-    image: "/assets/job.jpeg", 
+    image: "/assets/job.jpeg",
     tags: ["TypeScript", "HTML", "Tailwind"],
     slug: "job-listings-filter",
     demo: "https://job-listing-henna-beta.vercel.app/",
     github: "https://github.com/shashacodes/JobListing",
-    about: "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript."
+    about:
+      "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript.",
   },
-    {
-    id: "6",
+  {
+    id: "8",
     title: "MyNaijaMarket",
     description: "Vibrant and intuitive frontend for Nigeria's online marketplace.",
     image: "/assets/mnm.jpg",
@@ -80,7 +96,7 @@ export const projects = [
       "MyNaijaMarket is a visually compelling frontend application designed to support the vibrant e-commerce culture in Nigeria. It features a responsive UI that enhances user engagement and streamlines the online shopping experience. Built with Next.js and Tailwind CSS, the platform prioritizes speed, accessibility, and clean design architecture to reflect a modern marketplace interface.",
   },
   {
-    id: "7",
+    id: "9",
     title: "Password Generator",
     description: "JavaScript-powered password generator with customizable options.",
     image: "/assets/pw.jpg",
@@ -89,10 +105,10 @@ export const projects = [
     demo: "https://shashacodes.github.io/pwdgen/",
     github: "https://github.com/shashacodes/pwdgen",
     about:
-    "This project offers a client-side password generator that allows users to customize password strength by length and character types. It demonstrates core JavaScript skills, DOM manipulation, and UX design considerations for data privacy tools.",
+      "This project offers a client-side password generator that allows users to customize password strength by length and character types. It demonstrates core JavaScript skills, DOM manipulation, and UX design considerations for data privacy tools.",
   },
   {
-    id: "8",
+    id: "10",
     title: "Birthday Countdown",
     description: "Fun countdown timer for birthdays using JS.",
     image: "/assets/bday.jpg",
@@ -102,9 +118,9 @@ export const projects = [
     github: "https://github.com/shashacodes/javascript-project/blob/master/bday.html",
     about:
       "This countdown app adds a personal touch by allowing users to set and view the time left until a birthday. It's built with JavaScript to show real-time updates and offers fun, engaging interactions for users.",
-  }, 
+  },
   {
-    id: "9",
+    id: "11",
     title: "Blog Page",
     description: "Clean blog page layout styled with Tailwind.",
     image: "/assets/blogr.jpg",
@@ -116,7 +132,7 @@ export const projects = [
       "The blog page is designed using Tailwind CSS and showcases a clean, minimalist layout ideal for content presentation. It highlights responsive design, modular components, and utility-first styling.",
   },
   {
-    id: "10",
+    id: "12",
     title: "BMI Calculator",
     description: "Calculate your Body Mass Index using JavaScript.",
     image: "/assets/bmi.jpg",
@@ -128,7 +144,7 @@ export const projects = [
       "The BMI Calculator is a lightweight tool that enables users to compute their Body Mass Index based on height and weight. It applies simple formulas and DOM manipulation to present results in a readable format.",
   },
   {
-    id: "11",
+    id: "13",
     title: "GPA Calculator",
     description: "Calculate your GPA with a JavaScript-powered tool.",
     image: "/assets/gpa.png",
@@ -137,10 +153,10 @@ export const projects = [
     demo: "https://shashacodes.github.io/javascript-project/gpa.html",
     github: "https://github.com/shashacodes/javascript-project/blob/master/gpa.html",
     about:
-    "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
+      "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
   },
   {
-    id: "12",
+    id: "14",
     title: "Timer",
     description: "Simple countdown timer using JavaScript.",
     image: "/assets/timer.jpg",
@@ -149,10 +165,10 @@ export const projects = [
     demo: "https://shashacodes.github.io/javascript-project/third%20javascript.html",
     github: "https://github.com/shashacodes/javascript-project",
     about:
-    "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
+      "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
   },
   {
-    id: "13",
+    id: "15",
     title: "API JSON Display",
     description: "Delivering content using JSON API in React.",
     image: "/assets/api.jpg",
@@ -164,7 +180,7 @@ export const projects = [
       "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
   },
   {
-    id: "14",
+    id: "16",
     title: "HTML & CSS Markup",
     description: "Basic static webpage built with only HTML and CSS.",
     image: "/assets/markup.jpg",
@@ -175,44 +191,8 @@ export const projects = [
     about:
       "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
   },
-  // {
-  //   id: "15",
-  //   title: "Signup Page",
-  //   description: "Modern signup form created with Next.js.",
-  //   image: "/assets/groc.jpg",
-  //   tags: ["Next.js", "Form"],
-  //   slug: "signup-page",
-  //   demo: "https://signup-delta.vercel.app/",
-  //   github: "https://github.com/shashacodes/signup",
-  //   about:
-  //   "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
-  // },
-  // {
-  //   id: "16",
-  //   title: "React Hooks Demo",
-  //   description: "Using useState, onChange and more in a simple form app.",
-  //   image: "/assets/use.png",
-  //   tags: ["React", "Hooks"],
-  //   slug: "react-hooks-demo",
-  //   demo: "https://json-app.netlify.app/better",
-  //   github: "https://github.com/shashacodes/json-app",
-  //   about:
-  //     "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
-  // },
-  // {
-  //   id: "17",
-  //   title: "Prompt List",
-  //   description: "Prompt-based item list created with JS.",
-  //   image: "/assets/groc.jpg",
-  //   tags: ["JavaScript", "Array"],
-  //   slug: "prompt-list",
-  //   demo: "https://shashacodes.github.io/javascript-project/array.html",
-  //   github: "https://github.com/shashacodes/javascript-project",
-  //   about:
-  //     "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
-  // },
   {
-    id: "18",
+    id: "17",
     title: "Grocery App",
     description: "User-friendly online grocery shopping frontend with dynamic features.",
     image: "/assets/groc.jpg",
@@ -223,7 +203,40 @@ export const projects = [
     about:
       "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
   },
-
-  
-  
+  // {
+  //     id: "18",
+  //     title: "Signup Page",
+  //     description: "Modern signup form created with Next.js.",
+  //     image: "/assets/groc.jpg",
+  //     tags: ["Next.js", "Form"],
+  //     slug: "signup-page",
+  //     demo: "https://signup-delta.vercel.app/",
+  //     github: "https://github.com/shashacodes/signup",
+  //     about:
+  //     "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
+  //   },
+  //   {
+  //     id: "19,
+  //     title: "React Hooks Demo",
+  //     description: "Using useState, onChange and more in a simple form app.",
+  //     image: "/assets/use.png",
+  //     tags: ["React", "Hooks"],
+  //     slug: "react-hooks-demo",
+  //     demo: "https://json-app.netlify.app/better",
+  //     github: "https://github.com/shashacodes/json-app",
+  //     about:
+  //       "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
+  //   },
+  //   {
+  //     id: "20",
+  //     title: "Prompt List",
+  //     description: "Prompt-based item list created with JS.",
+  //     image: "/assets/groc.jpg",
+  //     tags: ["JavaScript", "Array"],
+  //     slug: "prompt-list",
+  //     demo: "https://shashacodes.github.io/javascript-project/array.html",
+  //     github: "https://github.com/shashacodes/javascript-project",
+  //     about:
+  //       "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
+  //   },
 ]
