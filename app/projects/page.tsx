@@ -70,9 +70,14 @@ export default function Projects() {
        
             <CardMedia
               component="img"
-              height="140"
               image={project.image}
               alt={project.title}
+                sx={{
+    height: 200,
+    objectFit: 'cover',
+    width: '100%',
+  }}
+
             />
             <CardContent className='text-left'>
               <Typography gutterBottom variant="h6" component="div">
@@ -97,7 +102,7 @@ export default function Projects() {
         fullScreen={window.innerWidth < 600} 
         maxWidth="md"
         fullWidth
-    
+        
       >
         <Box className="w-full relative p-4 py-6">
           <IconButton
@@ -119,7 +124,12 @@ export default function Projects() {
             <img
               src={currentProject?.image}
               alt={currentProject?.title}
-              className="h-48 w-full object-cover rounded-lg"
+  style={{
+    height: 200,
+    width: '100%',
+    objectFit: 'cover',
+    borderRadius: 8
+  }}
             />
           </Box>
 

@@ -83,6 +83,18 @@ export const projects = [
     about:
       "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript.",
   },
+    {
+  id: "18",
+  title: "Angular Movie App",
+  description: "A fully functional movie browsing app built with Angular and TypeScript, featuring a Netflix-style layout and responsive design.",
+  image: "/assets/movie.jpeg",  
+  tags: ["Angular", "TypeScript", "CSS", "Responsive Design"],
+  slug: "angular-movie-app",
+  demo: "https://angular-movies-app-dusky.vercel.app/",  
+  github: "https://github.com/shashacodes/Angular-movies-app",  
+  about:
+    "This Angular Movie App displays a list of popular movies with detailed information and trailer links. It showcases component-based architecture, service-driven data fetching, and clean, professional UI design using CSS for styling."
+},
   {
     id: "8",
     title: "MyNaijaMarket",
@@ -203,6 +215,7 @@ export const projects = [
     about:
       "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
   },
+
   // {
   //     id: "18",
   //     title: "Signup Page",
