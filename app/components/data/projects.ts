@@ -1,16 +1,16 @@
 export const projects = [
-  {
-    id: "1",
-    title: "Techbleat Website",
-    description: "Amplifying tech discourse with sleek design and intuitive navigation.",
-    image: "/assets/tech.jpg",
-    tags: ["Frontend", "Tailwind", "Next.js"],
-    slug: "techbleat",
-    demo: "https://techbleat.co.uk/",
-    github: "https://github.com/shashacodes/techbleat",
-    about:
-      "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
-  },
+{
+  id: "1",
+  title: "Crypto App",
+  description: "A modern cryptocurrency exchange frontend built with Next.js and Tailwind CSS.",
+  image: "/assets/crypto.jpeg",
+  tags: ["Next.js", "Tailwind", "TypeScript", "Frontend"],
+  slug: "crypto-app",
+  demo: "https://my-crypto-app-lemon.vercel.app/", 
+  github: "https://github.com/shashacodes/my-crypto-app",
+  about:
+    "The Crypto App mimics a real-world crypto trading platform, allowing users to view market data, search coins, and interact with buy/sell dialogs. Built using Next.js App Router, Tailwind CSS, and ShadCN UI for a responsive and sleek user experience. Dynamic routing and API integration with CoinGecko power the core functionality.",
+},
   {
     id: "2",
     title: "Product List with Cart",
@@ -107,8 +107,20 @@ export const projects = [
     about:
       "MyNaijaMarket is a visually compelling frontend application designed to support the vibrant e-commerce culture in Nigeria. It features a responsive UI that enhances user engagement and streamlines the online shopping experience. Built with Next.js and Tailwind CSS, the platform prioritizes speed, accessibility, and clean design architecture to reflect a modern marketplace interface.",
   },
-  {
+   {
     id: "9",
+    title: "Techbleat Website",
+    description: "Amplifying tech discourse with sleek design and intuitive navigation.",
+    image: "/assets/tech.jpg",
+    tags: ["Frontend", "Tailwind", "Next.js"],
+    slug: "techbleat",
+    demo: "https://techbleat.co.uk/",
+    github: "https://github.com/shashacodes/techbleat",
+    about:
+      "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
+  },
+  {
+    id: "10",
     title: "Password Generator",
     description: "JavaScript-powered password generator with customizable options.",
     image: "/assets/pw.jpg",
@@ -120,7 +132,7 @@ export const projects = [
       "This project offers a client-side password generator that allows users to customize password strength by length and character types. It demonstrates core JavaScript skills, DOM manipulation, and UX design considerations for data privacy tools.",
   },
   {
-    id: "10",
+    id: "11",
     title: "Birthday Countdown",
     description: "Fun countdown timer for birthdays using JS.",
     image: "/assets/bday.jpg",
@@ -132,7 +144,7 @@ export const projects = [
       "This countdown app adds a personal touch by allowing users to set and view the time left until a birthday. It's built with JavaScript to show real-time updates and offers fun, engaging interactions for users.",
   },
   {
-    id: "11",
+    id: "12",
     title: "Blog Page",
     description: "Clean blog page layout styled with Tailwind.",
     image: "/assets/blogr.jpg",
@@ -144,7 +156,7 @@ export const projects = [
       "The blog page is designed using Tailwind CSS and showcases a clean, minimalist layout ideal for content presentation. It highlights responsive design, modular components, and utility-first styling.",
   },
   {
-    id: "12",
+    id: "13",
     title: "BMI Calculator",
     description: "Calculate your Body Mass Index using JavaScript.",
     image: "/assets/bmi.jpg",
@@ -156,7 +168,7 @@ export const projects = [
       "The BMI Calculator is a lightweight tool that enables users to compute their Body Mass Index based on height and weight. It applies simple formulas and DOM manipulation to present results in a readable format.",
   },
   {
-    id: "13",
+    id: "14",
     title: "GPA Calculator",
     description: "Calculate your GPA with a JavaScript-powered tool.",
     image: "/assets/gpa.png",
@@ -168,7 +180,7 @@ export const projects = [
       "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
   },
   {
-    id: "14",
+    id: "15",
     title: "Timer",
     description: "Simple countdown timer using JavaScript.",
     image: "/assets/timer.jpg",
@@ -180,7 +192,7 @@ export const projects = [
       "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
   },
   {
-    id: "15",
+    id: "16",
     title: "API JSON Display",
     description: "Delivering content using JSON API in React.",
     image: "/assets/api.jpg",
@@ -192,7 +204,19 @@ export const projects = [
       "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
   },
   {
-    id: "16",
+    id: "17",
+    title: "Grocery App",
+    description: "User-friendly online grocery shopping frontend with dynamic features.",
+    image: "/assets/groc.jpg",
+    tags: ["React", "Tailwind", "Capstone"],
+    slug: "grocery-app",
+    demo: "https://capstone-theta-eight.vercel.app/",
+    github: "https://github.com/shashacodes/capstone",
+    about:
+    "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
+  },
+  {
+    id: "19",
     title: "HTML & CSS Markup",
     description: "Basic static webpage built with only HTML and CSS.",
     image: "/assets/markup.jpg",
@@ -203,18 +227,8 @@ export const projects = [
     about:
       "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
   },
-  {
-    id: "17",
-    title: "Grocery App",
-    description: "User-friendly online grocery shopping frontend with dynamic features.",
-    image: "/assets/groc.jpg",
-    tags: ["React", "Tailwind", "Capstone"],
-    slug: "grocery-app",
-    demo: "https://capstone-theta-eight.vercel.app/",
-    github: "https://github.com/shashacodes/capstone",
-    about:
-      "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
-  },
+
+
 
   // {
   //     id: "18",
