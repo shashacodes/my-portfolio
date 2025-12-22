@@ -84,13 +84,16 @@ const toggleTheme = () => {
 
 
 
-      <div className="grid gap-6 md:grid-cols-2  max-w-6xl py-10 mx-auto">
+      <div className="grid gap-10 md:grid-cols-2  max-w-6xl py-10 mx-auto">
         {projects.map((project: Project) => (
        <Card className='my-4'
        key={project.id}
        onClick={() => handleOpenDialog(project)}
        sx={{
          transition: 'transform 0.3s ease, box-shadow 1.3s ease',
+             backgroundColor: isDark ? "black" : "#f9fafb",
+             color: isDark ? "white" : "black",
+
          '&:hover': {
            transform: 'scale(1.05)',
            boxShadow: 6, 
@@ -113,15 +116,16 @@ const toggleTheme = () => {
 
             />
             <CardContent className='text-left'>
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography gutterBottom variant="h6"  component="div"  >
                 {project.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary"  sx={{ color: isDark ? "white" : "text.secondary" }}>
                 {project.description}
               </Typography>
-              <div className="mt-2 flex flex-wrap md:gap-4 gap-1">
+              <div className="mt-2 flex flex-wrap md:gap-4 gap-1 ">
                 {project.tags.map((tag) => (
-                  <Chip key={tag} label={tag} size="small" />
+                  <Chip key={tag} label={tag} size="small" sx={{ color: isDark ? "white" : "text.secondary" , backgroundColor: isDark ? "gray" : "#text.primary",
+} } />
                 ))}
               </div>
             </CardContent>
@@ -179,7 +183,11 @@ const toggleTheme = () => {
           <Typography variant="h6" className="mt-4 mb-2 ">Technologies Used</Typography>
           <Box className="flex flex-wrap gap-2 mb-4">
             {currentProject?.tags.map((tag: string) => (
-              <Chip key={tag} label={tag} size="small" className="mr-2 mb-2" />
+              <Chip key={tag} label={tag} size="small" className="mr-2 mb-2"   sx={{
+    backgroundColor: isDark ? "#374151" : "#e5e7eb",
+    color: isDark ? "#f9fafb" : "#111827",
+  }}
+/>
             ))}
           </Box>
 
