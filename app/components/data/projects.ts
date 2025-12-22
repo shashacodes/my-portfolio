@@ -1,5 +1,39 @@
 export const projects = [
 {
+  id: "1A",
+  title: "Blansheet Landing Page",
+  description:"A minimal landing page that introduces BlankSheet, provides key information, and give users  access to the main application.",
+  image: "/assets/edu.avif",
+  tags: ["Next.js", "Tailwind", "TypeScript", "Frontend"],
+  slug: "Blanksheet-app",
+  demo: "https://www.blanksheet.co/", 
+  about:"BlankSheet is a educational platform that helps educators organize content, share resources, and communicate with learners clearly and efficiently.",
+},
+{
+  id: "3",
+  title: "Atmosphere For Business",
+  description: "Immersive and user-centric frontend design that captivates visitors.",
+  image: "/assets/at.jpg",
+  tags: ["Next.js", "TypeScript", "Tailwind"],
+  slug: "atmosphere-business",
+  demo: "https://www.atmosphere.ng/",
+  github: "https://github.com/shashacodes/atmosphere",
+  about:
+    "Atmosphere for Business delivers a sleek, immersive web presence for a business-focused brand. The project emphasizes a clean layout, modern visual elements, and strong UX principles. Tailwind CSS powers the dynamic styling, while Next.js ensures fast load times and performance optimization across devices.",
+},
+{
+  id: "6",
+  title: "MyFlo App",
+  description: "A modern menstrual cycle and period tracker app built with TypeScript, Next.js, and Tailwind CSS.",
+  image: "/assets/period.jpeg",
+  tags: ["TypeScript", "Next.js", "Tailwind CSS", "React"],
+  slug: "myfloapp",
+  demo: "https://my-flo-app.vercel.app/",
+  github: "https://github.com/shashacodes/My-flo-app",
+  about:
+    "MyFlo App helps users track their menstrual cycles, period days, ovulation, and safe days with an interactive calendar interface. Built using React and Next.js with TypeScript for type safety and Tailwind CSS for responsive styling. The app visually highlights period days, ovulation, and safe days to assist with cycle awareness.",
+},
+  {
   id: "1",
   title: "Crypto App",
   description: "A modern cryptocurrency exchange frontend built with Next.js and Tailwind CSS.",
@@ -24,18 +58,6 @@ export const projects = [
       "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries.",
   },
   {
-    id: "3",
-    title: "Atmosphere For Business",
-    description: "Immersive and user-centric frontend design that captivates visitors.",
-    image: "/assets/at.jpg",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    slug: "atmosphere-business",
-    demo: "https://www.atmosphere.ng/",
-    github: "https://github.com/shashacodes/atmosphere",
-    about:
-      "Atmosphere for Business delivers a sleek, immersive web presence for a business-focused brand. The project emphasizes a clean layout, modern visual elements, and strong UX principles. Tailwind CSS powers the dynamic styling, while Next.js ensures fast load times and performance optimization across devices.",
-  },
-  {
     id: "4",
     title: "Rock Paper Scissors",
     description: "A simple Rock Paper Scissors game built with JavaScript where the user plays against the computer.",
@@ -58,18 +80,6 @@ export const projects = [
     github: "https://github.com/shashacodes/Music-Player",
     about:
       "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling.",
-  },
-  {
-    id: "6",
-    title: "MyFlo App",
-    description: "A modern menstrual cycle and period tracker app built with TypeScript, Next.js, and Tailwind CSS.",
-    image: "/assets/period.jpeg",
-    tags: ["TypeScript", "Next.js", "Tailwind CSS", "React"],
-    slug: "myfloapp",
-    demo: "https://my-flo-app.vercel.app/",
-    github: "https://github.com/shashacodes/My-flo-app",
-    about:
-      "MyFlo App helps users track their menstrual cycles, period days, ovulation, and safe days with an interactive calendar interface. Built using React and Next.js with TypeScript for type safety and Tailwind CSS for responsive styling. The app visually highlights period days, ovulation, and safe days to assist with cycle awareness.",
   },
   {
     id: "7",

@@ -4,6 +4,8 @@ import { Card, CardContent, CardMedia, Typography, Chip, Dialog, Box, IconButton
 import Link from 'next/link'
 import { projects } from '../components/data/projects'
 import { GitHub, Web, Close, ArrowUpward, Home } from '@mui/icons-material'
+import { LightMode, DarkMode } from "@mui/icons-material";
+
 
 interface Project {
   id: string
@@ -21,6 +23,13 @@ export default function Projects() {
   const [openDialog, setOpenDialog] = useState(false)
   const [currentProject, setCurrentProject] = useState<Project | null>(null) 
   const [isClient, setIsClient] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+
+const toggleTheme = () => {
+  setIsDark(prev => !prev);
+};
+
 
   useEffect(() => {
     setIsClient(true);
@@ -49,11 +58,35 @@ export default function Projects() {
 
 
   return (
-    <section id="projects" className="py-16 px-6 bg-gray-100 text-center">
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+<section
+  id="projects"
+  className={`py-16 px-6 text-center transition-colors duration-300 ${
+    isDark ? "bg-black text-white" : "bg-gray-100 text-black"
+  }`}
+>
+
+    <div className='flex justify-end '>
+      <h2 className="text-3xl font-bold mb-6 mx-auto" >Projects</h2>
+<IconButton
+  onClick={toggleTheme}
+  sx={{
+    mb: 4,
+    backgroundColor: isDark ? "#1f2937" : "#e5e7eb",
+    color: isDark ? "#facc15" : "#111827",
+    "&:hover": {
+      backgroundColor: isDark ? "#374151" : "#d1d5db",
+    },
+  }}
+>
+  {isDark ? <LightMode /> : <DarkMode />}
+</IconButton>
+  </div>
+
+
+
+      <div className="grid gap-6 md:grid-cols-2  max-w-6xl py-10 mx-auto">
         {projects.map((project: Project) => (
-       <Card
+       <Card className='my-4'
        key={project.id}
        onClick={() => handleOpenDialog(project)}
        sx={{
