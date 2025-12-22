@@ -65,7 +65,7 @@ const toggleTheme = () => {
   }`}
 >
 
-    <div className='flex justify-end '>
+    <div className='flex justify-end'>
       <h2 className="text-3xl font-bold mb-6 mx-auto" >Projects</h2>
 <IconButton
   onClick={toggleTheme}
