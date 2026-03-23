@@ -1,0 +1,159 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Home,
+  User,
+  Bookmark,
+  PenLine,
+  Mail,
+  Moon,
+  Sun,
+  Download,
+} from "lucide-react";
+import DarkModeToggle from "../components/button";
+import Header from "../components/Header";
+
+const stack = [
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "Vue.js",
+  "Figma",
+  "Jest",
+  "Cypress",
+  "WCAG",
+];
+
+const experience = [
+  {
+    company: "Blanksheet",
+    period: "January 2025 – Current",
+    role: "Frontend Engineer",
+  },
+  {
+    company: "Wave5Wireless",
+    period: "January 2024 – December 2024",
+    role: "Frontend Engineer",
+  },
+  {
+    company: "Unitvelocity",
+    period: "January 2024 – December 2024",
+    role: "Frontend Engineer Intern",
+  },
+];
+
+export default function AboutPage() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const bg = darkMode ? "bg-zinc-900" : "bg-[#f0efed]";
+  const text = darkMode ? "text-zinc-100" : "text-zinc-900";
+  const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
+  const cardBg = darkMode ? "bg-zinc-800" : "bg-white";
+  const border = darkMode ? "border-zinc-700" : "border-zinc-200";
+  const tagBg = darkMode ? "bg-zinc-700 text-zinc-200" : "bg-zinc-100 text-zinc-700";
+
+  return (
+    <div className={`min-h-screen transition-colors duration-300 ${bg} ${text}`}>
+<div className="w-full max-w-3xl mx-auto px-6 lg:px-8"><Header darkMode={darkMode} activePage="projects" />
+
+        <div className="mb-8">
+          <h1 className="text-2xl font-bold tracking-tight mb-0.5">SHARON IBANGA</h1>
+          <p className={`text-xs ${muted}`}>
+            Frontend Engineer · React · Next.js · TypeScript
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <h2 className="text-lg font-semibold mb-3">About Me</h2>
+          <div className={`text-sm leading-relaxed space-y-3 ${muted}`}>
+            <p>
+              I&apos;m Sharon Ibanga, a frontend engineer focused on building fast,
+              scalable, and user-centered web applications. With 3+ years of
+              experience, I work primarily with React, Next.js, and TypeScript to
+              deliver production-ready interfaces that balance performance,
+              usability, and clean architecture.
+            </p>
+            <p>
+              I have owned features end-to-end — translating requirements into
+              robust UI systems, optimizing load times, and ensuring stability
+              through testing. My work includes improving page performance by over
+              25%, building reusable component libraries, and collaborating closely
+              with backend and product teams to ship reliable, high-quality features.
+            </p>
+            <p>
+              Sharon brings a strong sense of structure, attention to detail, and
+              product thinking to every project — building not just interfaces, but
+              systems that scale and last.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h3 className={`text-xs font-semibold uppercase tracking-widest mb-3 ${muted}`}>
+            Primary Stack
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {stack.map((tech) => (
+              <span
+                key={tech}
+                className={`text-xs px-3 py-1.5 rounded-md font-medium ${tagBg}`}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h3 className={`text-xs font-semibold uppercase tracking-widest mb-3 ${muted}`}>
+            Experience
+          </h3>
+          <div className="space-y-4">
+            {experience.map((job) => (
+              <div
+                key={job.company}
+                className={`flex items-start justify-between border-b pb-4 last:border-0 last:pb-0 ${border}`}
+              >
+                <div>
+                  <p className="text-sm font-semibold">{job.company}</p>
+                  <p className={`text-xs mt-0.5 ${muted}`}>{job.period}</p>
+                </div>
+                <span className={`text-xs mt-0.5 ${muted}`}>{job.role}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="mb-10">
+          <a
+            href="/assets/Sharon_Ibanga_CV_2026 .pdf"
+            download
+            className={`inline-flex items-center gap-2 text-sm font-medium px-4 py-2.5 rounded-md transition-colors ${
+              darkMode
+                ? "bg-zinc-700 hover:bg-zinc-600 text-zinc-100"
+                : "bg-zinc-200 hover:bg-zinc-300 text-zinc-800"
+            }`}
+          >
+            <Download size={14} />
+            Download Full CV
+          </a>
+        </div>
+
+        <hr className={`mb-6 ${border}`} />
+
+        <footer className="flex items-center justify-between">
+          <div className={`text-xs ${muted}`}>
+            © {new Date().getFullYear()} Sharon Ibanga
+          </div>
+
+          <DarkModeToggle darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
+
+        </footer>
+
+      </div>
+    </div>
+  );
+}

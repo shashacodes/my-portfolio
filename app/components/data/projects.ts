@@ -1,4 +1,16 @@
 export const projects = [
+  {
+    id: "3",
+    title: "Atmosphere For Business",
+    description: "Immersive and user-centric frontend design that captivates visitors.",
+    image: "/assets/atmosphere.svg",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    slug: "atmosphere-business",
+    demo: "https://www.atmosphere.ng/",
+    github: "https://github.com/shashacodes/atmosphere",
+    about:
+      "Atmosphere for Business delivers a sleek, immersive web presence for a business-focused brand. The project emphasizes a clean layout, modern visual elements, and strong UX principles. Tailwind CSS powers the dynamic styling, while Next.js ensures fast load times and performance optimization across devices.",
+  },
 {
   id: "1A",
   title: "Blansheet Landing Page",
@@ -8,18 +20,6 @@ export const projects = [
   slug: "Blanksheet-app",
   demo: "https://www.blanksheet.co/", 
   about:"BlankSheet is a educational platform that helps educators organize content, share resources, and communicate with learners clearly and efficiently.",
-},
-{
-  id: "3",
-  title: "Atmosphere For Business",
-  description: "Immersive and user-centric frontend design that captivates visitors.",
-  image: "/assets/at.jpg",
-  tags: ["Next.js", "TypeScript", "Tailwind"],
-  slug: "atmosphere-business",
-  demo: "https://www.atmosphere.ng/",
-  github: "https://github.com/shashacodes/atmosphere",
-  about:
-    "Atmosphere for Business delivers a sleek, immersive web presence for a business-focused brand. The project emphasizes a clean layout, modern visual elements, and strong UX principles. Tailwind CSS powers the dynamic styling, while Next.js ensures fast load times and performance optimization across devices.",
 },
 {
   id: "6",
@@ -45,54 +45,54 @@ export const projects = [
   about:
     "The Crypto App mimics a real-world crypto trading platform, allowing users to view market data, search coins, and interact with buy/sell dialogs. Built using Next.js App Router, Tailwind CSS, and ShadCN UI for a responsive and sleek user experience. Dynamic routing and API integration with CoinGecko power the core functionality.",
 },
-  {
-    id: "2",
-    title: "Product List with Cart",
-    description: "A dynamic product list where users can add or remove items from a shopping cart, updating the UI in real-time.",
-    image: "/assets/groce.jpeg",
-    tags: ["TypeScript", "DOM Manipulation", "JSON", "Frontend"],
-    slug: "product-list-with-cart",
-    demo: "https://product-commerce-umber.vercel.app/",
-    github: "https://github.com/shashacodes/ProductCommerce",
-    about:
-      "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries.",
-  },
-  {
-    id: "4",
-    title: "Rock Paper Scissors",
-    description: "A simple Rock Paper Scissors game built with JavaScript where the user plays against the computer.",
-    image: "/assets/rockpaper.svg",
-    tags: ["TypeScript", "Game", "Interactive"],
-    slug: "rock-paper-scissors",
-    demo: "https://rock-paper-scissors-mu-ruddy.vercel.app/",
-    github: "https://github.com/shashacodes/rock-paper-scissors",
-    about:
-      "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation.",
-  },
-  {
-    id: "5",
-    title: "My Music Player",
-    description: "A sleek, responsive music player built with React, Tailwind CSS, and TypeScript.",
-    image: "/assets/music.jpeg",
-    tags: ["React", "Tailwind CSS", "TypeScript", "Audio", "Music"],
-    slug: "A simple music-player",
-    demo: "https://music-player-delta-eight.vercel.app/",
-    github: "https://github.com/shashacodes/Music-Player",
-    about:
-      "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling.",
-  },
-  {
-    id: "7",
-    title: "Job Listings Filtering",
-    description: "A job listings page where users can filter jobs by categories, using local JSON data.",
-    image: "/assets/job.jpeg",
-    tags: ["TypeScript", "HTML", "Tailwind"],
-    slug: "job-listings-filter",
-    demo: "https://job-listing-henna-beta.vercel.app/",
-    github: "https://github.com/shashacodes/JobListing",
-    about:
-      "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript.",
-  },
+  // {
+  //   id: "2",
+  //   title: "Product List with Cart",
+  //   description: "A dynamic product list where users can add or remove items from a shopping cart, updating the UI in real-time.",
+  //   image: "/assets/groce.jpeg",
+  //   tags: ["TypeScript", "DOM Manipulation", "JSON", "Frontend"],
+  //   slug: "product-list-with-cart",
+  //   demo: "https://product-commerce-umber.vercel.app/",
+  //   github: "https://github.com/shashacodes/ProductCommerce",
+  //   about:
+  //     "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries.",
+  // },
+  // {
+  //   id: "4",
+  //   title: "Rock Paper Scissors",
+  //   description: "A simple Rock Paper Scissors game built with JavaScript where the user plays against the computer.",
+  //   image: "/assets/rockpaper.svg",
+  //   tags: ["TypeScript", "Game", "Interactive"],
+  //   slug: "rock-paper-scissors",
+  //   demo: "https://rock-paper-scissors-mu-ruddy.vercel.app/",
+  //   github: "https://github.com/shashacodes/rock-paper-scissors",
+  //   about:
+  //     "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation.",
+  // },
+  // {
+  //   id: "5",
+  //   title: "My Music Player",
+  //   description: "A sleek, responsive music player built with React, Tailwind CSS, and TypeScript.",
+  //   image: "/assets/music.jpeg",
+  //   tags: ["React", "Tailwind CSS", "TypeScript", "Audio", "Music"],
+  //   slug: "A simple music-player",
+  //   demo: "https://music-player-delta-eight.vercel.app/",
+  //   github: "https://github.com/shashacodes/Music-Player",
+  //   about:
+  //     "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling.",
+  // },
+  // {
+  //   id: "7",
+  //   title: "Job Listings Filtering",
+  //   description: "A job listings page where users can filter jobs by categories, using local JSON data.",
+  //   image: "/assets/job.jpeg",
+  //   tags: ["TypeScript", "HTML", "Tailwind"],
+  //   slug: "job-listings-filter",
+  //   demo: "https://job-listing-henna-beta.vercel.app/",
+  //   github: "https://github.com/shashacodes/JobListing",
+  //   about:
+  //     "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript.",
+  // },
     {
   id: "18",
   title: "Angular Movie App",
@@ -177,66 +177,55 @@ export const projects = [
     about:
       "The BMI Calculator is a lightweight tool that enables users to compute their Body Mass Index based on height and weight. It applies simple formulas and DOM manipulation to present results in a readable format.",
   },
-  {
-    id: "14",
-    title: "GPA Calculator",
-    description: "Calculate your GPA with a JavaScript-powered tool.",
-    image: "/assets/gpa.png",
-    tags: ["JavaScript", "Calculator"],
-    slug: "gpa-calculator",
-    demo: "https://shashacodes.github.io/javascript-project/gpa.html",
-    github: "https://github.com/shashacodes/javascript-project/blob/master/gpa.html",
-    about:
-      "A GPA calculator built to assist students in computing their academic grades. This JavaScript app processes user input and dynamically calculates GPA, showcasing control flow, conditionals, and interactive feedback.",
-  },
-  {
-    id: "15",
-    title: "Timer",
-    description: "Simple countdown timer using JavaScript.",
-    image: "/assets/timer.jpg",
-    tags: ["JavaScript", "UI"],
-    slug: "timer",
-    demo: "https://shashacodes.github.io/javascript-project/third%20javascript.html",
-    github: "https://github.com/shashacodes/javascript-project",
-    about:
-      "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
-  },
-  {
-    id: "16",
-    title: "API JSON Display",
-    description: "Delivering content using JSON API in React.",
-    image: "/assets/api.jpg",
-    tags: ["React", "API"],
-    slug: "json-api",
-    demo: "https://json-app.netlify.app/",
-    github: "https://github.com/shashacodes/json-app",
-    about:
-      "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
-  },
-  {
-    id: "17",
-    title: "Grocery App",
-    description: "User-friendly online grocery shopping frontend with dynamic features.",
-    image: "/assets/groc.jpg",
-    tags: ["React", "Tailwind", "Capstone"],
-    slug: "grocery-app",
-    demo: "https://capstone-theta-eight.vercel.app/",
-    github: "https://github.com/shashacodes/capstone",
-    about:
-    "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
-  },
-  {
-    id: "19",
-    title: "HTML & CSS Markup",
-    description: "Basic static webpage built with only HTML and CSS.",
-    image: "/assets/markup.jpg",
-    tags: ["HTML", "CSS"],
-    slug: "html-css-markup",
-    demo: "https://shashacodes.github.io/frontend/html/markup.html",
-    github: "https://github.com/shashacodes/frontend",
-    about:
-      "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
-  },
+ 
+  // {
+  //   id: "15",
+  //   title: "Timer",
+  //   description: "Simple countdown timer using JavaScript.",
+  //   image: "/assets/timer.jpg",
+  //   tags: ["JavaScript", "UI"],
+  //   slug: "timer",
+  //   demo: "https://shashacodes.github.io/javascript-project/third%20javascript.html",
+  //   github: "https://github.com/shashacodes/javascript-project",
+  //   about:
+  //     "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
+  // },
+  // {
+  //   id: "16",
+  //   title: "API JSON Display",
+  //   description: "Delivering content using JSON API in React.",
+  //   image: "/assets/api.jpg",
+  //   tags: ["React", "API"],
+  //   slug: "json-api",
+  //   demo: "https://json-app.netlify.app/",
+  //   github: "https://github.com/shashacodes/json-app",
+  //   about:
+  //     "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
+  // },
+  // {
+  //   id: "17",
+  //   title: "Grocery App",
+  //   description: "User-friendly online grocery shopping frontend with dynamic features.",
+  //   image: "/assets/groc.jpg",
+  //   tags: ["React", "Tailwind", "Capstone"],
+  //   slug: "grocery-app",
+  //   demo: "https://capstone-theta-eight.vercel.app/",
+  //   github: "https://github.com/shashacodes/capstone",
+  //   about:
+  //   "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
+  // },
+  // {
+  //   id: "19",
+  //   title: "HTML & CSS Markup",
+  //   description: "Basic static webpage built with only HTML and CSS.",
+  //   image: "/assets/markup.jpg",
+  //   tags: ["HTML", "CSS"],
+  //   slug: "html-css-markup",
+  //   demo: "https://shashacodes.github.io/frontend/html/markup.html",
+  //   github: "https://github.com/shashacodes/frontend",
+  //   about:
+  //     "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
+  // },
 
 
 

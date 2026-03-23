@@ -1,279 +1,247 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import { Card, CardContent, CardMedia, Typography, Chip, Dialog, Box, IconButton, Divider, Button } from '@mui/material'
-import Link from 'next/link'
-import { projects } from '../components/data/projects'
-import { GitHub, Web, Close, ArrowUpward, Home } from '@mui/icons-material'
-import { LightMode, DarkMode } from "@mui/icons-material";
+"use client";
 
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Home,
+  User,
+  Bookmark,
+  PenLine,
+  Mail,
+  Moon,
+  Sun,
+  ArrowUpRight,
+} from "lucide-react";
+import Header from "../components/Header";
 
 interface Project {
-  id: string
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  slug: string
-  demo?: string
-  github?: string
-  about: string
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  year: string;
+  link?: string;
 }
 
-export default function Projects() {
-  const [openDialog, setOpenDialog] = useState(false)
-  const [currentProject, setCurrentProject] = useState<Project | null>(null) 
-  const [isClient, setIsClient] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "Atmosphere For Business",
+    description:
+      "A full-featured SaaS dashboard for business analytics with real-time data visualization and team collaboration tools.",
+    image: "/assets/atmosphere.svg",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    year: "2025",
+    link: "https://www.atmosphere.ng/",
+  },
+  {
+    id: 2,
+    title: "Blanksheet",
+    description:
+      "A minimal writing and note-taking app built for distraction-free long-form content creation.",
+    image: "/assets/bla.svg",
+    tags: ["React", "Figma", "WCAG"],
+    year: "2025",
+    link: "https://www.blanksheet.co/",
+  },
+  {
+    id: 3,
+    title: "Techbleat Website",
+    description:
+      "Marketing website and blog platform for a tech media brand, focused on performance and editorial clarity.",
+    image: "/assets/bleat.svg",
+    tags: ["Next.js", "Vue.js", "Jest"],
+    year: "2024",
+    link: "https://techbleat.co.uk/",
+  },
+  {
+    id: 4,
+    title: "MyNaijaMarket",
+    description:
+      "An e-commerce platform connecting local farmers directly to consumers with real-time inventory and order tracking.",
+    image: "/assets/markt.svg",
+    tags: ["React", "TypeScript", "Cypress"],
+    year: "2023",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Blogr",
+    description:"A blog page",
+    image: "/assets/Blogr.svg",
+    tags: ["React", "TypeScript", "css"],
+    year: "2023",
+    link: "https://shashacodes.github.io/tailwind-6b2/index.html",
+  },
+];
 
-
-const toggleTheme = () => {
-  setIsDark(prev => !prev);
-};
-
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-
-  const handleOpenDialog = (project: Project) => {
-    setCurrentProject(project)
-    setOpenDialog(true)
-  }
-
-  const handleCloseDialog = () => {
-    setOpenDialog(false)
-    setCurrentProject(null)
-  }
-
-  const scrollToTop = () => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  if (!isClient) {
-    return null;
-  }
-
+export default function ProjectPage() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-<section
-  id="projects"
-  className={`py-16 px-6 text-center transition-colors duration-300 ${
-    isDark ? "bg-black text-white" : "bg-gray-100 text-black"
-  }`}
->
-
-    <div className='flex justify-end'>
-      <h2 className="text-3xl font-bold mb-6 mx-auto" >Projects</h2>
-<IconButton
-  onClick={toggleTheme}
-  sx={{
-    mb: 4,
-    backgroundColor: isDark ? "#1f2937" : "#e5e7eb",
-    color: isDark ? "#facc15" : "#111827",
-    "&:hover": {
-      backgroundColor: isDark ? "#374151" : "#d1d5db",
-    },
-  }}
->
-  {isDark ? <LightMode /> : <DarkMode />}
-</IconButton>
-  </div>
+    <div
+      className={`min-h-screen transition-colors duration-300 ${
+        darkMode ? "bg-zinc-900 text-zinc-100" : "bg-[#f0efed] text-zinc-900"
+      }`}
+    >
+<div className="w-full max-w-3xl mx-auto px-6 lg:px-8"><Header darkMode={darkMode} activePage="projects" />
 
 
-
-      <div className="grid gap-10 md:grid-cols-2  max-w-6xl py-10 mx-auto">
-        {projects.map((project: Project) => (
-       <Card className='my-4'
-       key={project.id}
-       onClick={() => handleOpenDialog(project)}
-       sx={{
-         transition: 'transform 0.3s ease, box-shadow 1.3s ease',
-             backgroundColor: isDark ? "black" : "#f9fafb",
-             color: isDark ? "white" : "black",
-
-         '&:hover': {
-           transform: 'scale(1.05)',
-           boxShadow: 6, 
-         },
-         cursor: 'pointer',
-         
-       }}
-     >
-     
-       
-            <CardMedia
-              component="img"
-              image={project.image}
-              alt={project.title}
-                sx={{
-    height: 200,
-    objectFit: 'cover',
-    width: '100%',
-  }}
-
-            />
-            <CardContent className='text-left'>
-              <Typography gutterBottom variant="h6"  component="div"  >
-                {project.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary"  sx={{ color: isDark ? "white" : "text.secondary" }}>
-                {project.description}
-              </Typography>
-              <div className="mt-2 flex flex-wrap md:gap-4 gap-1 ">
-                {project.tags.map((tag) => (
-                  <Chip key={tag} label={tag} size="small" sx={{ color: isDark ? "white" : "text.secondary" , backgroundColor: isDark ? "gray" : "#text.primary",
-} } />
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-
-      <Dialog
-        open={openDialog}
-        onClose={handleCloseDialog}
-        fullScreen={window.innerWidth < 600} 
-        maxWidth="md"
-        fullWidth
-        
-      >
-        <Box className="w-full relative p-4 py-6">
-          <IconButton
-            onClick={handleCloseDialog}
-            edge="end"
-            sx={{
-              position: 'absolute',
-              top: 16,
-              right: 16,
-              zIndex: 1000,
-              color: '#052E16',
-            }}
+        <div className="mb-8">
+          <h1 className="text-2xl font-bold tracking-tight mb-0.5">
+            SHARON IBANGA
+          </h1>
+          <p
+            className={`text-xs ${
+              darkMode ? "text-zinc-400" : "text-zinc-500"
+            }`}
           >
-            <Close fontSize="large" className='bg-white rounded-md p-1 '/>
-          </IconButton>
+            Frontend Engineer · React · Next.js · TypeScript
+          </p>
+        </div>
 
+        <section className="mb-8">
+          <h2 className="text-lg font-semibold mb-1">Project</h2>
+          <p
+            className={`text-sm leading-relaxed ${
+              darkMode ? "text-zinc-400" : "text-zinc-500"
+            }`}
+          >
+            A selection of things I&apos;ve built — from SaaS products to
+            marketing sites. Each project reflects my focus on performance,
+            usability, and clean architecture.
+          </p>
+        </section>
 
-          <Box className="flex justify-center mb-4  ">
-            <img
-              src={currentProject?.image}
-              alt={currentProject?.title}
-  style={{
-    height: 200,
-    width: '100%',
-    objectFit: 'cover',
-    borderRadius: 8
-  }}
-            />
-          </Box>
+        <div className="space-y-4 mb-10">
+          {projects.map((project) => (
+            <a
+              key={project.id}
+              href={project.link ?? "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => setHovered(project.id)}
+              onMouseLeave={() => setHovered(null)}
+              className={`block rounded-xl overflow-hidden transition-all duration-200 group ${
+                darkMode
+                  ? "bg-zinc-800 hover:bg-zinc-700"
+                  : " hover:bg-zinc-50"
+              } ${hovered === project.id ? "shadow-md" : "shadow-sm"}`}
+            >
+              <div className="relative w-full h-80 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
 
-          <Typography variant="h5" gutterBottom>
-            {currentProject?.title}
-          </Typography>
+              <div className="p-4">
+                <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <h3 className="text-sm font-semibold leading-snug">
+                    {project.title}
+                  </h3>
 
-          <Divider className="mb-4" />
+                </div>
 
-          <Typography variant="body1" paragraph>
-            {currentProject?.description}
-          </Typography>
+              </div>
+            </a>
+          ))}
+        </div>
 
-          <Typography variant="h6" className="mt-4 mb-2 ">Technologies Used</Typography>
-          <Box className="flex flex-wrap gap-2 mb-4">
-            {currentProject?.tags.map((tag: string) => (
-              <Chip key={tag} label={tag} size="small" className="mr-2 mb-2"   sx={{
-    backgroundColor: isDark ? "#374151" : "#e5e7eb",
-    color: isDark ? "#f9fafb" : "#111827",
-  }}
-/>
-            ))}
-          </Box>
+        <hr
+          className={`mb-6 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
+        />
 
-          <Typography variant="h6" className="mt-4 mb-2">About the Project</Typography>
-          {currentProject?.about && (
-  <Typography variant="body2" paragraph>
-    {currentProject.about}
-  </Typography>
-)}
+        <footer className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className={`transition-colors ${
+                  darkMode
+                    ? "text-zinc-400 hover:text-zinc-100"
+                    : "text-zinc-500 hover:text-zinc-900"
+                }`}
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a
+              href="https://yoursite.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Website"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transition-colors ${
+                  darkMode
+                    ? "text-zinc-400 hover:text-zinc-100"
+                    : "text-zinc-500 hover:text-zinc-900"
+                }`}
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </a>
+            <Link href="/contact" aria-label="Email">
+              <Mail
+                size={16}
+                className={`transition-colors ${
+                  darkMode
+                    ? "text-zinc-400 hover:text-zinc-100"
+                    : "text-zinc-500 hover:text-zinc-900"
+                }`}
+              />
+            </Link>
+          </div>
 
-          <Divider className="my-4" />
-
-          <Box className="mt-4">
-            {currentProject?.demo && (
-              <Box className="flex items-center gap-2 mb-2 underline italic text-[#052E16]">
-                <Web />{' '}
-                <a href={currentProject.demo} target="_blank" rel="noopener noreferrer">
-                 View Website Demo
-                </a>
-              </Box>
-            )}
-            {currentProject?.github && (
-              <Box className="flex items-center gap-2 mb-2 underline italic text-[#052E16]">
-                <GitHub />{' '}
-                <a href={currentProject.github} target="_blank" rel="noopener noreferrer">
-                 View GitHub Repository
-                </a>
-              </Box>
-            )}
-          </Box>
-        </Box>
-        {currentProject && (
-  <Button
-    component="a"
-    href={currentProject.demo}
-    target="_blank"
-    rel="noopener noreferrer"
-    variant="contained"
-    sx={{
-      backgroundColor: '#052E16',
-      color: '#fff',
-      '&:hover': {
-        backgroundColor: '#388E3C',
-        color:"black"
-      }
-    }}
-  >
-    Open Project
-  </Button>
-)}
-
-      </Dialog>
-
-      <IconButton
-        onClick={scrollToTop}
-        className='animate-bounce'
-        sx={{
-          position: 'fixed',
-          bottom: 30,
-          right: 30,
-          backgroundColor: '#052E16',
-          color: '#fff',
-          '&:hover': {
-            backgroundColor: '#388E3C',
-          },
-        }}
-      >
-        <ArrowUpward fontSize="large" />
-      </IconButton>
-
-      <Link href="/" passHref>
-        <IconButton
-          sx={{
-            position: 'fixed',
-            top: 30,
-            left: 30,
-            backgroundColor: '#052E16',
-            color: '#fff',
-            '&:hover': {
-              backgroundColor: '#388E3C',
-            },
-          }}
-        >
-          <Home fontSize="large" />
-        </IconButton>
-      </Link>
-    </section>
-  )
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle dark mode"
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs transition-colors ${
+              darkMode
+                ? "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
+                : "bg-zinc-200 text-zinc-600 hover:bg-zinc-300"
+            }`}
+          >
+            {darkMode ? <Sun size={12} /> : <Moon size={12} />}
+            <div
+              className={`w-6 h-3.5 rounded-full relative transition-colors ${
+                darkMode ? "bg-zinc-500" : "bg-zinc-400"
+              }`}
+            >
+              <div
+                className={`absolute top-0.5 w-2.5 h-2.5 rounded-full bg-white transition-all ${
+                  darkMode ? "left-[13px]" : "left-0.5"
+                }`}
+              />
+            </div>
+          </button>
+        </footer>
+      </div>
+    </div>
+  );
 }
