@@ -36,7 +36,7 @@ export default function BlogPage() {
         darkMode ? "bg-zinc-900 text-zinc-100" : "bg-[#f0efed] text-zinc-900"
       }`}
     >
-      <div className="w-full max-w-xl mx-auto px-6 py-8">
+<div className="w-full max-w-3xl mx-auto px-6 lg:px-8">
         <Header darkMode={darkMode} activePage="blog" />
 
         <div className="mb-8">
