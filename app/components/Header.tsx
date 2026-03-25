@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Home, User, Bookmark, PenLine, Mail } from "lucide-react";
 
 type ActivePage = "home" | "about" | "projects" | "blog" | "contact";
 
@@ -10,11 +9,11 @@ interface HeaderProps {
 }
 
 const navLinks = [
-  { href: "/",         label: "Home",     icon: Home,     page: "home"     },
-  { href: "/about",    label: "About",    icon: User,     page: "about"    },
-  { href: "/projects", label: "Projects", icon: Bookmark, page: "projects" },
-  { href: "/blog",     label: "Blog",     icon: PenLine,  page: "blog"     },
-  { href: "/contact",  label: "Contact",  icon: Mail,     page: "contact"  },
+  { href: "/",         label: "Home",     icon: "/assets/home.svg", page: "home"},
+  { href: "/about",    label: "About",    icon: "/assets/user.svg", page: "about"    },
+  { href: "/projects", label: "Projects", icon: "/assets/project.svg", page: "projects" },
+  { href: "/blog",     label: "Blog",     icon: "/assets/Blogr.svg",  page: "blog"     },
+  { href: "/contact",  label: "Contact",  icon: "/assets/mail.svg",  page: "contact"  },
 ] as const;
 
 export default function Header({ darkMode, activePage }: HeaderProps) {
@@ -32,7 +31,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
       />
 
       <nav className="flex items-center gap-3 mt-1">
-        {navLinks.map(({ href, label, icon: Icon, page }) => {
+        {navLinks.map(({ href, label, icon: icon, page }) => {
           const isActive = activePage === page;
           return isActive ? (
             <div
@@ -40,12 +39,22 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
               className={`p-1.5 rounded-md ${darkMode ? "bg-zinc-700" : "bg-zinc-300"}`}
               aria-label={label}
             >
-              <Icon size={14} />
+        <Image
+          src={icon}        
+          alt={label}
+          width={14}
+          height={14}
+          className={darkMode ? "invert" : ""}
+        />
             </div>
           ) : (
             <Link key={page} href={href} aria-label={label}>
-              <Icon
-                size={18}
+                     <Image
+          src={icon}        
+          alt={label}
+          width={18}
+          height={18}
+
                 className={`${muted} hover:text-current transition-colors`}
               />
             </Link>

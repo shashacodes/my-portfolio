@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,6 +14,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import Header from "../components/Header";
+import DarkModeToggle from "../components/button";
 
 interface Project {
   id: number;
@@ -70,7 +71,7 @@ const projects: Project[] = [
     id: 5,
     title: "Blogr",
     description:"A blog page",
-    image: "/assets/Blogr.svg",
+    image: "/assets/Blog.svg",
     tags: ["React", "TypeScript", "css"],
     year: "2023",
     link: "https://shashacodes.github.io/tailwind-6b2/index.html",
@@ -80,6 +81,11 @@ const projects: Project[] = [
 export default function ProjectPage() {
   const [darkMode, setDarkMode] = useState(false);
   const [hovered, setHovered] = useState<number | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div
@@ -103,7 +109,7 @@ export default function ProjectPage() {
           </p>
         </div>
 
-        <section className="mb-8">
+        <section className="mb-8 ">
           <h2 className="text-lg font-semibold mb-1">Project</h2>
           <p
             className={`text-sm leading-relaxed ${
@@ -117,7 +123,7 @@ export default function ProjectPage() {
         </section>
 
         <div className="space-y-4 mb-10">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <a
               key={project.id}
               href={project.link ?? "#"}
@@ -125,11 +131,13 @@ export default function ProjectPage() {
               rel="noopener noreferrer"
               onMouseEnter={() => setHovered(project.id)}
               onMouseLeave={() => setHovered(null)}
-              className={`block rounded-xl overflow-hidden transition-all duration-200 group ${
-                darkMode
-                  ? "bg-zinc-800 hover:bg-zinc-700"
-                  : " hover:bg-zinc-50"
-              } ${hovered === project.id ? "shadow-md" : "shadow-sm"}`}
+                            style={{ transitionDelay: `${200 + index * 80}ms` }}
+ 
+             className={`block rounded-xl overflow-hidden transition-all duration-500 group
+                ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+                ${darkMode ? "bg-zinc-800 hover:bg-zinc-700" : "hover:bg-zinc-50"}
+                ${hovered === project.id ? "shadow-md scale-[1.01]" : "shadow-sm scale-100"}
+              `}
             >
               <div className="relative w-full h-80 overflow-hidden">
                 <Image
@@ -154,10 +162,14 @@ export default function ProjectPage() {
         </div>
 
         <hr
-          className={`mb-6 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
+          className={`mb-6 transition-all duration-500 delay-700 ${
+            mounted ? "opacity-100" : "opacity-0"
+          }  ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
         />
 
-        <footer className="flex items-center justify-between">
+        <footer className={`flex items-center justify-between pb-8 transition-all duration-500 delay-700 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}>
           <div className="flex items-center gap-4">
             <a
               href="https://linkedin.com"
@@ -165,81 +177,40 @@ export default function ProjectPage() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className={`transition-colors ${
-                  darkMode
-                    ? "text-zinc-400 hover:text-zinc-100"
-                    : "text-zinc-500 hover:text-zinc-900"
-                }`}
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
+<Image
+  src="/assets/link.svg"
+  alt="Mail"
+  width={16}
+  height={16}
+  className="transition-opacity opacity-60 hover:opacity-100"
+/>            </a>
             <a
               href="https://yoursite.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Website"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={`transition-colors ${
-                  darkMode
-                    ? "text-zinc-400 hover:text-zinc-100"
-                    : "text-zinc-500 hover:text-zinc-900"
-                }`}
-              >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              </svg>
-            </a>
+<Image
+  src="/assets/git.svg"
+  alt="Mail"
+  width={16}
+  height={16}
+  className="transition-opacity opacity-60 hover:opacity-100"
+/>            </a>
             <Link href="/contact" aria-label="Email">
-              <Mail
-                size={16}
-                className={`transition-colors ${
-                  darkMode
-                    ? "text-zinc-400 hover:text-zinc-100"
-                    : "text-zinc-500 hover:text-zinc-900"
-                }`}
-              />
+
+<Image
+  src="/assets/mail.svg"
+  alt="Mail"
+  width={16}
+  height={16}
+  className=" opacity-60 hover:opacity-100 transition-opacity"
+/>
             </Link>
           </div>
 
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle dark mode"
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs transition-colors ${
-              darkMode
-                ? "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
-                : "bg-zinc-200 text-zinc-600 hover:bg-zinc-300"
-            }`}
-          >
-            {darkMode ? <Sun size={12} /> : <Moon size={12} />}
-            <div
-              className={`w-6 h-3.5 rounded-full relative transition-colors ${
-                darkMode ? "bg-zinc-500" : "bg-zinc-400"
-              }`}
-            >
-              <div
-                className={`absolute top-0.5 w-2.5 h-2.5 rounded-full bg-white transition-all ${
-                  darkMode ? "left-[13px]" : "left-0.5"
-                }`}
-              />
-            </div>
-          </button>
+                 <DarkModeToggle darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
+       
         </footer>
       </div>
     </div>
