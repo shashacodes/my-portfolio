@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import DarkModeToggle from "../components/button";
 import Header from "../components/Header";
+import Newsletter from "../components/Newsletter";
 
 export default function ContactPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -203,43 +204,8 @@ export default function ContactPage() {
           className={`mb-6 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
         />
 
-        <section className="mb-10">
-          <h3 className="text-sm font-semibold mb-0.5">
-            Subscribe to my newsletter
-          </h3>
-          <p
-            className={`text-xs mb-3 ${
-              darkMode ? "text-zinc-400" : "text-zinc-500"
-            }`}
-          >
-            Read first when I publish new content. No spam, I promise!
-          </p>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder="name@example.com"
-              value={newsletter}
-              onChange={(e) => setNewsletter(e.target.value)}
-              className={`flex-1 px-3 py-2 text-sm rounded-md border outline-none transition-colors ${
-                darkMode
-                  ? "bg-zinc-800 border-zinc-700 text-zinc-100 placeholder-zinc-600 focus:border-zinc-500"
-                  : "bg-white border-zinc-200 text-zinc-900 placeholder-zinc-400 focus:border-zinc-400"
-              }`}
-            />
-            <button
-              onClick={handleNewsletterSubmit}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors whitespace-nowrap ${
-                newsletterSubmitted
-                  ? "bg-green-600 text-white"
-                  : darkMode
-                  ? "bg-zinc-600 hover:bg-zinc-500 text-white"
-                  : "bg-zinc-600 hover:bg-zinc-700 text-white"
-              }`}
-            >
-              {newsletterSubmitted ? "Subscribed ✓" : "Subscribe"}
-            </button>
-          </div>
-        </section>
+<Newsletter darkMode={darkMode} />
+
 
         <footer className="flex items-center justify-between">
           <div className="flex items-center gap-4">

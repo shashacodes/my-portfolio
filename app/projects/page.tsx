@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import DarkModeToggle from "../components/button";
+import Footer from "../components/Footer";
 
 interface Project {
   id: number;
@@ -139,7 +140,7 @@ export default function ProjectPage() {
                 ${hovered === project.id ? "shadow-md scale-[1.01]" : "shadow-sm scale-100"}
               `}
             >
-              <div className="relative w-full h-80 overflow-hidden">
+              <div className="relative w-[966px] h-80 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -167,51 +168,10 @@ export default function ProjectPage() {
           }  ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
         />
 
-        <footer className={`flex items-center justify-between pb-8 transition-all duration-500 delay-700 ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}>
-          <div className="flex items-center gap-4">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-<Image
-  src="/assets/link.svg"
-  alt="Mail"
-  width={16}
-  height={16}
-  className="transition-opacity opacity-60 hover:opacity-100"
-/>            </a>
-            <a
-              href="https://yoursite.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Website"
-            >
-<Image
-  src="/assets/git.svg"
-  alt="Mail"
-  width={16}
-  height={16}
-  className="transition-opacity opacity-60 hover:opacity-100"
-/>            </a>
-            <Link href="/contact" aria-label="Email">
-
-<Image
-  src="/assets/mail.svg"
-  alt="Mail"
-  width={16}
-  height={16}
-  className=" opacity-60 hover:opacity-100 transition-opacity"
-/>
-            </Link>
-          </div>
-
-                 <DarkModeToggle darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
-       
-        </footer>
+<Footer darkMode={darkMode}
+  onToggle={() => setDarkMode(!darkMode)}
+  mounted={mounted}
+ />
       </div>
     </div>
   );

@@ -15,6 +15,9 @@ import {
 } from "lucide-react";
 import DarkModeToggle from "../components/button";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const stack = [
   "React.js",
@@ -44,6 +47,20 @@ const experience = [
     role: "Frontend Engineer Intern",
   },
 ];
+const testimonials = [
+  {
+    text: "She has a strong eye for clean, intuitive design and builds responsive, well-structured interfaces. She's collaborative, reliable, and focused on creating smooth user experiences. A great front-end developer and a valuable asset to any team.",
+    author: "Nicholas, co-founder Blanksheet",
+  },
+  {
+    text: "Working with Sharon was a pleasure. She delivered pixel-perfect components on time and communicated clearly throughout. Her attention to detail and TypeScript knowledge really stood out.",
+    author: "John, CTO AtmosphereHQ",
+  },
+  {
+    text: "Sharon brought both technical skill and design sensibility to the project. She took ownership of the frontend and shipped features we were proud to show clients.",
+    author: "Amara, Product Lead Techbleat",
+  },
+];
 
 export default function AboutPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -53,7 +70,7 @@ export default function AboutPage() {
   const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
   const cardBg = darkMode ? "bg-zinc-800" : "bg-white";
   const border = darkMode ? "border-zinc-700" : "border-zinc-200";
-  const tagBg = darkMode ? "bg-zinc-700 text-zinc-200" : "bg-zinc-100 text-zinc-700";
+  const tagBg = darkMode ? "text-zinc-200" : "bg-[#D9D9D9] text-zinc-700";
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${bg} ${text}`}>
@@ -99,7 +116,7 @@ export default function AboutPage() {
             {stack.map((tech) => (
               <span
                 key={tech}
-                className={`text-xs px-3 py-1.5 rounded-md font-medium ${tagBg}`}
+                className={`text-xs px-3 py-1.5  rounded-md font-medium ${tagBg}`}
               >
                 {tech}
               </span>
@@ -143,15 +160,29 @@ export default function AboutPage() {
         </div>
 
         <hr className={`mb-6 ${border}`} />
+<Swiper
+  modules={[Autoplay, Pagination]}
+  autoplay={{ delay: 4000, disableOnInteraction: false }}
+  pagination={{ clickable: true }}
+  loop
+  className="mb-6"
+>
+  {testimonials.map((t, i) => (
+    <SwiperSlide key={i}>
+      <div className={`rounded-[21px] p-8 ${darkMode ? "bg-zinc-800" : "bg-[#E4E4E4]"}`}>
+        <p className={`text-sm leading-[1.65] mb-4 ${darkMode ? "text-zinc-300" : "text-zinc-700"}`}>
+          {t.text}
+        </p>
+        <p className="font-semibold text-sm">___ {t.author}</p>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
-        <footer className="flex items-center justify-between">
-          <div className={`text-xs ${muted}`}>
-            © {new Date().getFullYear()} Sharon Ibanga
-          </div>
 
-          <DarkModeToggle darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
-
-        </footer>
+<Footer darkMode={darkMode}
+  onToggle={() => setDarkMode(!darkMode)}
+ />
 
       </div>
     </div>

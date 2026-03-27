@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import DarkModeToggle from "@/app/components/button";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 
 const projects = [
   {
@@ -33,10 +35,10 @@ const projects = [
 ];
 
 const articles = [
-  { title: "Building in the Age of AI", date: "Apr 4, 2026" },
-  { title: "Girlie in Tech, What's Next", date: "Mar 28, 2026" },
-  { title: "2026 Dev Trends to watchout", date: "Nov 4, 2025" },
-  { title: "Starting and Growing a career in Web Development", date: "Sep 27, 2025" },
+  { title: "AI in Front-End Development: What’s Changing in 2026", date: "Apr 4, 2026" },
+  { title: "Creating a High-Performance LMS", date: "Mar 28, 2026" },
+  { title: "From Static to Smart: How AI is Transforming Websites", date: "Nov 4, 2025" },
+  { title: "Keeping Up as a Mid-Level Front-End Dev in a Rapidly Changing Tech World", date: "Sep 27, 2025" },
 ];
 
 export default function HomePage() {
@@ -131,62 +133,12 @@ export default function HomePage() {
             View All <ArrowRight size={12} />
           </Link>
         </section>
+        <Newsletter darkMode={darkMode}  />
+        
 
-        <footer className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={`${muted} hover:text-current transition-colors`}
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect width="4" height="12" x="2" y="9" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-            <a
-              href="https://yoursite.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Website"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={`${muted} hover:text-current transition-colors`}
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                <path d="M2 12h20" />
-              </svg>
-            </a>
-            <a href="mailto:sharon@gmail.com" aria-label="Email">
-              <Mail size={16} className={`${muted} hover:text-current transition-colors`} />
-            </a>
-          </div>
-
-          <DarkModeToggle darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
-        </footer>
+<Footer darkMode={darkMode}
+  onToggle={() => setDarkMode(!darkMode)}
+ />
 
       </div>
     </div>
