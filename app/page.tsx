@@ -71,22 +71,29 @@ export default function HomePage() {
             href="/about"
             className={`inline-flex items-center gap-1 text-xs mt-3 font-medium ${muted} hover:text-current transition-colors`}
           >
-            Read More <ArrowRight size={12} />
+            Read More  <Image
+                    src="/assets/leftarrow.svg"
+                    alt="left-arrow"
+                    width={16}
+                    height={16}
+                    className="w-2 h-3 rounded-md object-cover"
+                    
+                  />
           </Link>
         </section>
 
-        <hr className={`mb-6 ${border}`} />
+        <hr className={`mb-6 border-2 ${border}`} />
 
-        <section className="mb-8">
+        <section className="mb-8 ">
           <h2 className="text-xs font-semibold tracking-widest uppercase mb-4">
             Selected Project
           </h2>
 
-          <div className="space-y-0">
+          <div className="space-y-0 ">
             {projects.map((p, i) => (
               <div
                 key={i}
-                className={`flex items-center justify-between py-2.5 border-b ${border} ${rowHover} cursor-pointer transition-colors -mx-2 px-2 rounded-sm`}
+                className={`flex items-center justify-between py-2.5 border-b${border} ${rowHover} cursor-pointer transition-colors -mx-2 px-2 rounded-sm`}
               >
                 <div className="flex items-center gap-4">
                   <span className={`text-xs tabular-nums ${muted}`}>{p.year}</span>
@@ -103,11 +110,18 @@ export default function HomePage() {
             href="/projects"
             className={`inline-flex items-center gap-1 text-xs mt-3 font-medium ${muted} hover:text-current transition-colors`}
           >
-            View All <ArrowRight size={12} />
+            View All  <Image
+        src="/assets/leftarrow.svg"
+        alt="left-arrow"
+        width={16}
+        height={16}
+        className="w-2 h-3 rounded-md object-cover"
+        priority
+      />
           </Link>
         </section>
 
-        <hr className={`mb-6 ${border}`} />
+        <hr className={`mb-6 border-2 ${border}`} />
 
         <section className="mb-10">
           <h2 className="text-xs font-semibold tracking-widest uppercase mb-4">
@@ -118,7 +132,7 @@ export default function HomePage() {
             {articles.map((a, i) => (
               <div
                 key={i}
-                className={`flex items-start justify-between py-2.5 border-b ${border} ${rowHover} cursor-pointer transition-colors -mx-2 px-2 rounded-sm gap-4`}
+                className={`flex items-start justify-between py-2.5 border-b bg-[#ECECEC] ${border} ${rowHover} cursor-pointer transition-colors -mx-2 px-2 rounded-sm gap-4`}
               >
                 <span className="text-sm font-medium leading-snug">{a.title}</span>
                 <span className={`text-xs whitespace-nowrap pt-0.5 ${muted}`}>{a.date}</span>
@@ -130,11 +144,21 @@ export default function HomePage() {
             href="/blog"
             className={`inline-flex items-center gap-1 text-xs mt-3 font-medium ${muted} hover:text-current transition-colors`}
           >
-            View All <ArrowRight size={12} />
+            Read all  <Image
+        src="/assets/leftarrow.svg"
+        alt="left-arrow"
+        width={16}
+        height={16}
+        className="w-2 h-3 rounded-md object-cover"
+        priority
+      />
           </Link>
         </section>
+                <hr className={`mb-6 border-2 ${border}`} />
+
         <Newsletter darkMode={darkMode}  />
-        
+                 <hr className={`mb-6 border-2 ${border}`} />
+
 
 <Footer darkMode={darkMode}
   onToggle={() => setDarkMode(!darkMode)}

@@ -43,3 +43,32 @@ button:focus {
   position: relative;
   margin-top: 12px;
 }
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .tooltip {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 999;
+}
+
+.nav-item:hover .tooltip {
+  opacity: 1;
+}
+.nav-item[data-dark="true"] .tooltip {
+  background: #ffffff;
+  color: #000000;
+}

@@ -98,7 +98,7 @@ export default function ProjectPage() {
 
 
         <div className="mb-8">
-          <h1 className="text-2xl font-bold tracking-tight mb-0.5">
+          <h1 className="text-2xl font-extrabold tracking-tight mb-0.5">
             SHARON IBANGA
           </h1>
           <p
@@ -111,7 +111,7 @@ export default function ProjectPage() {
         </div>
 
         <section className="mb-8 ">
-          <h2 className="text-lg font-semibold mb-1">Project</h2>
+          <h2 className="text-lg font-extrabold mb-1">Project</h2>
           <p
             className={`text-sm leading-relaxed ${
               darkMode ? "text-zinc-400" : "text-zinc-500"
@@ -140,7 +140,7 @@ export default function ProjectPage() {
                 ${hovered === project.id ? "shadow-md scale-[1.01]" : "shadow-sm scale-100"}
               `}
             >
-              <div className="relative w-[966px] h-80 overflow-hidden">
+              <div className="relative max-w-[966px] h-80 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -163,9 +163,7 @@ export default function ProjectPage() {
         </div>
 
         <hr
-          className={`mb-6 transition-all duration-500 delay-700 ${
-            mounted ? "opacity-100" : "opacity-0"
-          }  ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
+          className={`mb-6 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
         />
 
 <Footer darkMode={darkMode}

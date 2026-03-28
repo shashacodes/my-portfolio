@@ -66,26 +66,26 @@ export default function AboutPage() {
   const [darkMode, setDarkMode] = useState(false);
 
   const bg = darkMode ? "bg-zinc-900" : "bg-[#f0efed]";
-  const text = darkMode ? "text-zinc-100" : "text-zinc-900";
+  const text = darkMode ? "text-zinc-100" : "text-black";
   const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
   const cardBg = darkMode ? "bg-zinc-800" : "bg-white";
   const border = darkMode ? "border-zinc-700" : "border-zinc-200";
   const tagBg = darkMode ? "text-zinc-200" : "bg-[#D9D9D9] text-zinc-700";
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${bg} ${text}`}>
+    <div className={`min-h-screen transition-colors duration-300 text-black md:text-lg text-xs ${bg} ${text}`}>
 <div className="w-full max-w-3xl mx-auto px-6 lg:px-8"><Header darkMode={darkMode} activePage="projects" />
 
         <div className="mb-8">
-          <h1 className="text-2xl font-bold tracking-tight mb-0.5">SHARON IBANGA</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight mb-0.5">SHARON IBANGA</h1>
           <p className={`text-xs ${muted}`}>
             Frontend Engineer · React · Next.js · TypeScript
           </p>
         </div>
 
         <section className="mb-8">
-          <h2 className="text-lg font-semibold mb-3">About Me</h2>
-          <div className={`text-sm leading-relaxed space-y-3 ${muted}`}>
+          <h2 className=" font-extrabold mb-3">About Me</h2>
+          <div className={`leading-relaxed space-y-3 ${muted}`}>
             <p>
               I&apos;m Sharon Ibanga, a frontend engineer focused on building fast,
               scalable, and user-centered web applications. With 3+ years of
@@ -132,10 +132,10 @@ export default function AboutPage() {
             {experience.map((job) => (
               <div
                 key={job.company}
-                className={`flex items-start justify-between border-b pb-4 last:border-0 last:pb-0 ${border}`}
+                className={`flex items-start justify-between  pb-4 last:border-0 last:pb-0 ${border}`}
               >
                 <div>
-                  <p className="text-sm font-semibold">{job.company}</p>
+                  <p className=" font-semibold">{job.company}</p>
                   <p className={`text-xs mt-0.5 ${muted}`}>{job.period}</p>
                 </div>
                 <span className={`text-xs mt-0.5 ${muted}`}>{job.role}</span>
@@ -144,22 +144,21 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="mb-10">
+        <div className="flex justify-end mb-10">
           <a
             href="/assets/Sharon_Ibanga_CV_2026 .pdf"
             download
-            className={`inline-flex items-center gap-2 text-sm font-medium px-4 py-2.5 rounded-md transition-colors ${
+            className={`inline-flex right-0 items-center gap-2  font-medium px-4 py-2.5 rounded-md transition-colors ${
               darkMode
-                ? "bg-zinc-700 hover:bg-zinc-600 text-zinc-100"
+                ? "bg-zinc-700 hover:bg-zinc-600 text-black"
                 : "bg-zinc-200 hover:bg-zinc-300 text-zinc-800"
             }`}
           >
-            <Download size={14} />
             Download Full CV
           </a>
         </div>
 
-        <hr className={`mb-6 ${border}`} />
+        <hr className={`mb-10 border-2  ${border}`} />
 <Swiper
   modules={[Autoplay, Pagination]}
   autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -170,16 +169,17 @@ export default function AboutPage() {
   {testimonials.map((t, i) => (
     <SwiperSlide key={i}>
       <div className={`rounded-[21px] p-8 ${darkMode ? "bg-zinc-800" : "bg-[#E4E4E4]"}`}>
-        <p className={`text-sm leading-[1.65] mb-4 ${darkMode ? "text-zinc-300" : "text-zinc-700"}`}>
+        <p className={` leading-[1.65] mb-4 ${darkMode ? "text-zinc-300" : "text-zinc-700"}`}>
           {t.text}
         </p>
-        <p className="font-semibold text-sm">___ {t.author}</p>
+        <p className="font-semibold px-4">___ {t.author}</p>
       </div>
     </SwiperSlide>
   ))}
 </Swiper>
 
 
+<hr className={`mb-18 border-2 ${border}`} />
 <Footer darkMode={darkMode}
   onToggle={() => setDarkMode(!darkMode)}
  />

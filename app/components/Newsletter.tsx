@@ -25,11 +25,11 @@ export default function Newsletter({ darkMode, mounted = true }: NewsletterProps
 
   return (
     <section
-      className={`mb-10 transition-all duration-500 delay-500 ${
+      className={`mb-10 py-8 transition-all duration-500 delay-500 ${
         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <h3 className="text-[30px] font-semibold mb-0.5">Subscribe to my newsletter</h3>
+      <h3 className="md:text-[30px] font-semibold mb-0.5">Subscribe to my newsletter</h3>
       <p className={`text-xs mb-3 leading-[1.65] ${muted}`}>
         Read first when I publish new content. No spam, I promise!
       </p>

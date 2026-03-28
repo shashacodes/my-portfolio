@@ -20,7 +20,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
   const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
 
   return (
-    <header className="flex items-start justify-between mb-8 p-6">
+    <header className="flex items-start justify-between p-6 mb-2 font-extrabold">
       <Image
         src="/assets/my-ai.jpeg"
         alt="Sharon Ibanga"
@@ -36,7 +36,8 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
           return isActive ? (
             <div
               key={page}
-              className={`p-1.5 rounded-md ${darkMode ? "bg-zinc-700" : "bg-zinc-300"}`}
+                data-dark={darkMode}
+              className={`nav-item p-1.5 rounded-md ${darkMode ? "bg-zinc-700" : ""}`}
               aria-label={label}
             >
         <Image
@@ -48,15 +49,17 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
         />
             </div>
           ) : (
-            <Link key={page} href={href} aria-label={label}>
+            <Link key={page} href={href} aria-label={label} className="nav-item">
                      <Image
           src={icon}        
           alt={label}
           width={18}
           height={18}
 
-                className={`${muted} hover:text-current transition-colors`}
+                className={`${muted} opacity-50 hover:opacity-100 transition-opacity duration-300`}
               />
+                  <span className="tooltip">{label}</span>
+
             </Link>
           );
         })}

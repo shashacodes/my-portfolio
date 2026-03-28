@@ -33,7 +33,7 @@ const posts: BlogPost[] = [
     readTime: "5 mins Read",
     featured: true,
     image: "/assets/lms.svg",
-    link: "#",
+  link: "/blog/building-high-performance-lms",  
   },
   {
     id: 3,
@@ -89,7 +89,6 @@ export default function BlogPage() {
         <div className={`transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}>
           <Header darkMode={darkMode} activePage="blog" />
         </div>
-white
         <div className={`mb-8 transition-all duration-500 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <h1 className="text-2xl font-bold tracking-tight mb-0.5">SHARON IBANGA</h1>
           <p className={`text-xs ${muted}`}>Frontend Engineer · React · Next.js · TypeScript</p>
@@ -164,24 +163,21 @@ white
 
                   </div>
                   
-                </div>
-                      <hr className={`mb-6 ${darkMode ? "border-zinc-700 border-4" : "border-zinc-300"}`} />
-  
+                </div>  
 
                       <hr className={` mb-4 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`} />
 {post.image && (
-  <div className="relative py-6">
-
-    <div className="absolute right-6 top-1/2 -translate-y-[50px] w-40 h-24 overflow-visible shrink-0 z-10">
+  <div className="relative py-6 overflow-visible ">
+    <div className="absolute z-50 sm:right-6 right-0 top-1/2 -translate-y-1/2 w-30 sm:w-40 h-20 sm:h-24 overflow-visible shrink-0 ">
       <Image
         src={post.image}
         alt={post.title}
         fill
-        className="object-cover rounded-xl rotate-[-18deg] shadow-lg group-hover:scale-105 transition-transform"
+        className="object-cover z- rounded-xl rotate-[-18deg] shadow-lg group-hover:scale-105 transition-transform"
       />
     </div>
 
-    <hr className={`mt-4 ${darkMode ? "border-black" : "border-"}`} />
+    <hr className={`mt-4 ${darkMode ? "border-black" : "border-zinc-300"}`} />
   </div>
 )}
               </a>
@@ -195,7 +191,7 @@ white
                 className={`flex items-start justify-between gap-4 py-4 border-b group transition-all duration-300 ${borderColor} last:border-0`}
               >
 
-                <div className="flex-1 min-w-0 p-2">
+                <div className="flex-1 min-w-0 p-2 text-[#6F6F6F]">
                   {post.tag && (
                     <p className={`text-[10px] font-medium mb-1 ${muted}`}>{post.tag}</p>
                   )}
@@ -224,7 +220,9 @@ white
 
         <hr className={`mb-6 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`} />
 
- 
+         <Newsletter darkMode={darkMode}  />
+                  <hr className={`mb-6  ${borderColor}`} />
+
 
         <Footer
           darkMode={darkMode}

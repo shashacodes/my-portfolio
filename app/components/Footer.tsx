@@ -15,7 +15,7 @@ export default function Footer({ darkMode, onToggle, mounted = true }: FooterPro
         mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <p className={`text-xs ${darkMode ? "text-zinc-500" : "text-zinc-400"}`}>
+      <p className={`text-xs ${darkMode ? "text-white" : "text-black"}`}>
         © 2026 Sharon Ibanga 
       </p>
       <div className="flex items-center gap-4">
@@ -25,7 +25,7 @@ export default function Footer({ darkMode, onToggle, mounted = true }: FooterPro
             alt="LinkedIn"
             width={16}
             height={16}
-            className={`opacity-60 hover:opacity-100 transition-opacity ${darkMode ? "invert" : ""}`}
+            className={`opacity-60 hover:opacity-100 transition-opacity ${darkMode ? "invert " : ""}`}
           />
         </a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

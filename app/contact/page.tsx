@@ -204,7 +204,6 @@ export default function ContactPage() {
           className={`mb-6 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`}
         />
 
-<Newsletter darkMode={darkMode} />
 
 
         <footer className="flex items-center justify-between">
