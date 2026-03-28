@@ -37,7 +37,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
             <div
               key={page}
                 data-dark={darkMode}
-              className={`nav-item p-1.5 rounded-md ${darkMode ? "bg-zinc-700" : ""}`}
+              className={`nav-item p-1.5 rounded-md ${darkMode ? "bg-zinc-700" : "hover:bg-[#D9D9D9] "}`}
               aria-label={label}
             >
         <Image
@@ -53,8 +53,8 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
                      <Image
           src={icon}        
           alt={label}
-          width={18}
-          height={18}
+          width={14}
+          height={14}
 
                 className={`${muted} opacity-50 hover:opacity-100 transition-opacity duration-300`}
               />

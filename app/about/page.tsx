@@ -74,7 +74,7 @@ export default function AboutPage() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 text-black md:text-lg text-xs ${bg} ${text}`}>
-<div className="w-full max-w-3xl mx-auto px-6 lg:px-8"><Header darkMode={darkMode} activePage="projects" />
+<div className="w-full max-w-3xl mx-auto px-6 lg:px-8"><Header darkMode={darkMode} activePage="about" />
 
         <div className="mb-8">
           <h1 className="text-2xl font-extrabold tracking-tight mb-0.5">SHARON IBANGA</h1>

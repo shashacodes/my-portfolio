@@ -132,7 +132,11 @@ export default function HomePage() {
             {articles.map((a, i) => (
               <div
                 key={i}
-                className={`flex items-start justify-between py-2.5 border-b bg-[#ECECEC] ${border} ${rowHover} cursor-pointer transition-colors -mx-2 px-2 rounded-sm gap-4`}
+                className={`flex items-start justify-between py-2.5 border-b bg-[#ECECEC ${
+                  darkMode
+                  ? "bg-zinc-700"
+                  :"bg-[#ECECEC]"
+                } ${border} ${rowHover} cursor-pointer transition-colors -mx-2 px-2 rounded-sm gap-4`}
               >
                 <span className="text-sm font-medium leading-snug">{a.title}</span>
                 <span className={`text-xs whitespace-nowrap pt-0.5 ${muted}`}>{a.date}</span>
