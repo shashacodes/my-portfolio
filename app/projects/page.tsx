@@ -147,13 +147,13 @@ const { darkMode, toggleDarkMode } = useDarkMode();
               onMouseLeave={() => setHovered(null)}
                             style={{ transitionDelay: `${200 + index * 80}ms` }}
  
-             className={`block rounded-xl overflow-hidden transition-all duration-500 group
+             className={`project-text-wrap  block rounded-xl overflow-hidden transition-all duration-500 group
                 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
                 ${darkMode ? "bg-zinc-800 hover:bg-zinc-700" : "hover:bg-zinc-50"}
                 ${hovered === project.id ? "shadow-md scale-[1.01]" : "shadow-sm scale-100"}
               `}
             >
-<Link href={`/projects/${project.slug}`}>
+<Link href={`/projects/${project.slug}`} className="project-image-wrap block w-full h-80">
               <div className="relative max-w-[966px] h-80 overflow-hidden">
                 <Image
                   src={project.image}
@@ -161,6 +161,10 @@ const { darkMode, toggleDarkMode } = useDarkMode();
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+<div className="project-image-overlay">
+    <span className="project-image-label">More Details →</span>
+  </div>
+
               </div>
                   </Link>
 
@@ -169,6 +173,12 @@ const { darkMode, toggleDarkMode } = useDarkMode();
                   <h3 className="text-sm font-semibold leading-snug">
                     {project.title}
                   </h3>
+ <span className={`project-live-label ${darkMode ? "text-zinc-400" : "text-zinc-500"}`}>
+    Go to Live Project
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+    </svg>
+  </span>
 
                 </div>
 

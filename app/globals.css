@@ -90,3 +90,62 @@ button:focus {
   transform: scale(1.1) translateY(-6px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
+
+/* Project card image overlay */
+.project-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.project-image-wrap:hover .project-image-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.project-image-label {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image-wrap:hover .project-image-label {
+  opacity: 1;
+}
+
+.project-text-wrap {
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  transition: background 0.2s ease;
+}
+
+.project-live-label {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 12px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* hover on the <a> itself */
+.project-text-wrap:hover .project-live-label {
+  opacity: 1;
+}
