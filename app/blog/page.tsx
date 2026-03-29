@@ -6,6 +6,8 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
+import { useDarkMode } from "@/app/components/hooks/useDarkMode";
+
 
 interface BlogPost {
   id: number;
@@ -50,11 +52,12 @@ const posts: BlogPost[] = [
 ];
 
 export default function BlogPage() {
-  const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [search, setSearch] = useState("");
   const [newsletter, setNewsletter] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const { darkMode, toggleDarkMode } = useDarkMode();
+
 
   useEffect(() => {
     setMounted(true);
@@ -173,7 +176,7 @@ export default function BlogPage() {
         src={post.image}
         alt={post.title}
         fill
-        className="object-cover z- rounded-xl rotate-[-18deg] shadow-lg group-hover:scale-105 transition-transform"
+        className="object-cover z- rounded-xl rotate-[-18deg] shadow-lg group-hover:scale-105 transition-transform "
       />
     </div>
 
@@ -226,7 +229,7 @@ export default function BlogPage() {
 
         <Footer
           darkMode={darkMode}
-          onToggle={() => setDarkMode(!darkMode)}
+          onToggle={toggleDarkMode}
           mounted={mounted}
         />
 

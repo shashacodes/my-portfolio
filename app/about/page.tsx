@@ -18,6 +18,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useDarkMode } from "@/app/components/hooks/useDarkMode";
+
 
 const stack = [
   "React.js",
@@ -63,9 +65,8 @@ const testimonials = [
 ];
 
 export default function AboutPage() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const bg = darkMode ? "bg-zinc-900" : "bg-[#f0efed]";
+const { darkMode, toggleDarkMode } = useDarkMode();
+const bg = darkMode ? "bg-zinc-900" : "bg-[#f0efed]";
   const text = darkMode ? "text-zinc-100" : "text-black";
   const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
   const cardBg = darkMode ? "bg-zinc-800" : "bg-white";
@@ -84,7 +85,7 @@ export default function AboutPage() {
         </div>
 
         <section className="mb-8">
-          <h2 className=" font-extrabold mb-3">About Me</h2>
+          <h2 className=" font-semibold mb-3">About Me</h2>
           <div className={`leading-relaxed space-y-3 ${muted}`}>
             <p>
               I&apos;m Sharon Ibanga, a frontend engineer focused on building fast,
@@ -181,7 +182,7 @@ export default function AboutPage() {
 
 <hr className={`mb-18 border-2 ${border}`} />
 <Footer darkMode={darkMode}
-  onToggle={() => setDarkMode(!darkMode)}
+  onToggle={toggleDarkMode}
  />
 
       </div>

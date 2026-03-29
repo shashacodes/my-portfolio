@@ -18,9 +18,12 @@ import Image from "next/image";
 import DarkModeToggle from "../components/button";
 import Header from "../components/Header";
 import Newsletter from "../components/Newsletter";
+import { useDarkMode } from "@/app/components/hooks/useDarkMode";
+
 
 export default function ContactPage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggleDarkMode } = useDarkMode();
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [newsletter, setNewsletter] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -250,7 +253,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <DarkModeToggle darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
+          <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} />
 
         </footer>
       </div>

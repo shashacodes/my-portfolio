@@ -26,7 +26,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
         alt="Sharon Ibanga"
         width={56}
         height={56}
-        className="w-14 h-14 rounded-md object-cover"
+        className="w-14 h-14 rounded-md object-cover "
         priority
       />
 

@@ -16,6 +16,8 @@ import {
 import Header from "../components/Header";
 import DarkModeToggle from "../components/button";
 import Footer from "../components/Footer";
+import { useDarkMode } from "@/app/components/hooks/useDarkMode";
+
 
 interface Project {
   id: number;
@@ -25,6 +27,7 @@ interface Project {
   tags: string[];
   year: string;
   link?: string;
+  slug?: string
 }
 
 const projects: Project[] = [
@@ -37,6 +40,8 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind"],
     year: "2025",
     link: "https://www.atmosphere.ng/",
+        slug: "atmosphere",       
+
   },
   {
     id: 2,
@@ -47,6 +52,8 @@ const projects: Project[] = [
     tags: ["React", "Figma", "WCAG"],
     year: "2025",
     link: "https://www.blanksheet.co/",
+        slug: "blanksheet-lms",   
+
   },
   {
     id: 3,
@@ -57,6 +64,8 @@ const projects: Project[] = [
     tags: ["Next.js", "Vue.js", "Jest"],
     year: "2024",
     link: "https://techbleat.co.uk/",
+        slug: "techbleat",     
+
   },
   {
     id: 4,
@@ -67,6 +76,8 @@ const projects: Project[] = [
     tags: ["React", "TypeScript", "Cypress"],
     year: "2023",
     link: "#",
+        slug: "mynaijamarket",   
+
   },
   {
     id: 5,
@@ -76,11 +87,13 @@ const projects: Project[] = [
     tags: ["React", "TypeScript", "css"],
     year: "2023",
     link: "https://shashacodes.github.io/tailwind-6b2/index.html",
+        slug: "blogr",            
+
   },
 ];
 
 export default function ProjectPage() {
-  const [darkMode, setDarkMode] = useState(false);
+const { darkMode, toggleDarkMode } = useDarkMode();
   const [hovered, setHovered] = useState<number | null>(null);
     const [mounted, setMounted] = useState(false);
 
@@ -111,7 +124,7 @@ export default function ProjectPage() {
         </div>
 
         <section className="mb-8 ">
-          <h2 className="text-lg font-extrabold mb-1">Project</h2>
+          <h2 className="text-lg font-semibold mb-1">Project</h2>
           <p
             className={`text-sm leading-relaxed ${
               darkMode ? "text-zinc-400" : "text-zinc-500"
@@ -140,14 +153,16 @@ export default function ProjectPage() {
                 ${hovered === project.id ? "shadow-md scale-[1.01]" : "shadow-sm scale-100"}
               `}
             >
+<Link href={`/projects/${project.slug}`}>
               <div className="relative max-w-[966px] h-80 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                  />
               </div>
+                  </Link>
 
               <div className="p-4">
                 <div className="flex items-start justify-between gap-2 mb-1.5">
@@ -167,7 +182,7 @@ export default function ProjectPage() {
         />
 
 <Footer darkMode={darkMode}
-  onToggle={() => setDarkMode(!darkMode)}
+  onToggle={toggleDarkMode}
   mounted={mounted}
  />
       </div>

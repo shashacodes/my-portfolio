@@ -1,268 +1,91 @@
-export const projects = [
+export interface ProjectDetail {
+  id: number;
+  slug: string;
+  title: string;
+  role: string;
+  liveLink: string;
+  liveLinkLabel: string;
+  year: string;
+  image: string;
+  overview: string;
+  projectGoal: string;
+  roleAndServices: string[];
+  closing: string;
+  prev?: { slug: string; label: string };
+  next?: { slug: string; label: string };
+}
+
+export const projects: ProjectDetail[] = [
   {
-    id: "3",
-    title: "Atmosphere For Business",
-    description: "Immersive and user-centric frontend design that captivates visitors.",
+    id: 1,
+    slug: "atmosphere",
+    title: "Atmosphere for Business",
+    role: "Front-End Development · Responsive Design · Web Interactions",
+    liveLink: "https://www.atmosphere.ng",
+    liveLinkLabel: "Atmosphere",
+    year: "2024",
     image: "/assets/atmosphere.svg",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    slug: "atmosphere-business",
-    demo: "https://www.atmosphere.ng/",
-    github: "https://github.com/shashacodes/atmosphere",
-    about:
-      "Atmosphere for Business delivers a sleek, immersive web presence for a business-focused brand. The project emphasizes a clean layout, modern visual elements, and strong UX principles. Tailwind CSS powers the dynamic styling, while Next.js ensures fast load times and performance optimization across devices.",
+    overview:
+      "Atmosphere.ng is a dynamic e-commerce platform built to provide a fast, engaging, and seamless shopping experience. The project focused on creating a responsive, scalable front-end that brings the platform's modern design and functionality to life across devices.",
+    projectGoal:
+      "The goal was to deliver a high-performance, user-friendly interface that supports browsing, purchasing, and account management with minimal friction. The platform needed to feel intuitive, reliable, and visually engaging while maintaining strong responsiveness and fast load times.",
+    roleAndServices: [
+      "Front-End Development: Built the interface using React.js, leveraging component-based architecture and server-side rendering for faster initial load and SEO optimization.",
+      "API Integration: Integrated with RESTful APIs to fetch product data, manage user accounts, and handle transactions in real time.",
+      "Responsive Design: Developed a fully responsive UI with Tailwind CSS and CSS media queries to ensure seamless experiences across desktops, tablets, and mobile devices.",
+      "UI Implementation: Translated UI/UX designs into reusable React components, implementing interactive elements such as carousels, modals, and dynamic product filters.",
+      "Web Performance Optimization: Applied lazy loading, image optimization, and code-splitting to enhance page speed and runtime efficiency.",
+    ],
+    closing:
+      "I handled the end-to-end front-end development, creating a maintainable, performant, and visually consistent experience that aligns with Atmosphere.ng's mission of delivering an effortless online shopping journey.",
+    next: { slug: "blanksheet", label: "Blanksheet" },
   },
-{
-  id: "1A",
-  title: "Blansheet Landing Page",
-  description:"A minimal landing page that introduces BlankSheet, provides key information, and give users  access to the main application.",
-  image: "/assets/edu.avif",
-  tags: ["Next.js", "Tailwind", "TypeScript", "Frontend"],
-  slug: "Blanksheet-app",
-  demo: "https://www.blanksheet.co/", 
-  about:"BlankSheet is a educational platform that helps educators organize content, share resources, and communicate with learners clearly and efficiently.",
-},
-{
-  id: "6",
-  title: "MyFlo App",
-  description: "A modern menstrual cycle and period tracker app built with TypeScript, Next.js, and Tailwind CSS.",
-  image: "/assets/period.jpeg",
-  tags: ["TypeScript", "Next.js", "Tailwind CSS", "React"],
-  slug: "myfloapp",
-  demo: "https://my-flo-app.vercel.app/",
-  github: "https://github.com/shashacodes/My-flo-app",
-  about:
-    "MyFlo App helps users track their menstrual cycles, period days, ovulation, and safe days with an interactive calendar interface. Built using React and Next.js with TypeScript for type safety and Tailwind CSS for responsive styling. The app visually highlights period days, ovulation, and safe days to assist with cycle awareness.",
-},
   {
-  id: "1",
-  title: "Crypto App",
-  description: "A modern cryptocurrency exchange frontend built with Next.js and Tailwind CSS.",
-  image: "/assets/crypto.jpeg",
-  tags: ["Next.js", "Tailwind", "TypeScript", "Frontend"],
-  slug: "crypto-app",
-  demo: "https://my-crypto-app-lemon.vercel.app/", 
-  github: "https://github.com/shashacodes/my-crypto-app",
-  about:
-    "The Crypto App mimics a real-world crypto trading platform, allowing users to view market data, search coins, and interact with buy/sell dialogs. Built using Next.js App Router, Tailwind CSS, and ShadCN UI for a responsive and sleek user experience. Dynamic routing and API integration with CoinGecko power the core functionality.",
-},
-  // {
-  //   id: "2",
-  //   title: "Product List with Cart",
-  //   description: "A dynamic product list where users can add or remove items from a shopping cart, updating the UI in real-time.",
-  //   image: "/assets/groce.jpeg",
-  //   tags: ["TypeScript", "DOM Manipulation", "JSON", "Frontend"],
-  //   slug: "product-list-with-cart",
-  //   demo: "https://product-commerce-umber.vercel.app/",
-  //   github: "https://github.com/shashacodes/ProductCommerce",
-  //   about:
-  //     "Product List with Cart is a project focused on practicing dynamic UI updates based on user actions. It loads products from a JSON file and displays them in a responsive layout. Users can add or remove products from the cart, and the cart total updates immediately. The project emphasizes DOM manipulation, event handling, and dynamic rendering of components. It also helps in understanding state management without relying on external libraries.",
-  // },
-  // {
-  //   id: "4",
-  //   title: "Rock Paper Scissors",
-  //   description: "A simple Rock Paper Scissors game built with JavaScript where the user plays against the computer.",
-  //   image: "/assets/rockpaper.svg",
-  //   tags: ["TypeScript", "Game", "Interactive"],
-  //   slug: "rock-paper-scissors",
-  //   demo: "https://rock-paper-scissors-mu-ruddy.vercel.app/",
-  //   github: "https://github.com/shashacodes/rock-paper-scissors",
-  //   about:
-  //     "Rock Paper Scissors is an interactive game where the player competes against the computer. The player selects one of the three options (rock, paper, or scissors), and the computer makes a random choice. The game determines the winner based on the rules of the game. This project demonstrates basic JavaScript functionality, including user input handling, random selection, and logic implementation.",
-  // },
-  // {
-  //   id: "5",
-  //   title: "My Music Player",
-  //   description: "A sleek, responsive music player built with React, Tailwind CSS, and TypeScript.",
-  //   image: "/assets/music.jpeg",
-  //   tags: ["React", "Tailwind CSS", "TypeScript", "Audio", "Music"],
-  //   slug: "A simple music-player",
-  //   demo: "https://music-player-delta-eight.vercel.app/",
-  //   github: "https://github.com/shashacodes/Music-Player",
-  //   about:
-  //     "This music player mimics the core functionality of an original music player, allowing users to search and filter songs, play/pause tracks, and navigate through a playlist. Built with React typescript and Tailwind CSS, it features a responsive design, audio playback using the HTMLAudioElement API, and seamless UI interaction. It demonstrates advanced React concepts like refs, state management, and conditional rendering while also focusing on user experience and modern styling.",
-  // },
-  // {
-  //   id: "7",
-  //   title: "Job Listings Filtering",
-  //   description: "A job listings page where users can filter jobs by categories, using local JSON data.",
-  //   image: "/assets/job.jpeg",
-  //   tags: ["TypeScript", "HTML", "Tailwind"],
-  //   slug: "job-listings-filter",
-  //   demo: "https://job-listing-henna-beta.vercel.app/",
-  //   github: "https://github.com/shashacodes/JobListing",
-  //   about:
-  //     "In this project, users can filter jobs based on selected categories. It practices working with JSON data locally and dynamic DOM manipulation using vanilla JavaScript.",
-  // },
-    {
-  id: "18",
-  title: "Angular Movie App",
-  description: "A fully functional movie browsing app built with Angular and TypeScript, featuring a Netflix-style layout and responsive design.",
-  image: "/assets/movie.jpeg",  
-  tags: ["Angular", "TypeScript", "CSS", "Responsive Design"],
-  slug: "angular-movie-app",
-  demo: "https://angular-movies-app-dusky.vercel.app/",  
-  github: "https://github.com/shashacodes/Angular-movies-app",  
-  about:
-    "This Angular Movie App displays a list of popular movies with detailed information and trailer links. It showcases component-based architecture, service-driven data fetching, and clean, professional UI design using CSS for styling."
-},
-  {
-    id: "8",
-    title: "MyNaijaMarket",
-    description: "Vibrant and intuitive frontend for Nigeria's online marketplace.",
-    image: "/assets/mnm.jpg",
-    tags: ["Next.js", "Tailwind", "Frontend"],
-    slug: "mynaijamarket",
-    demo: "https://mynaijamarket.com/",
-    github: "https://github.com/shashacodes/mynaijamarket",
-    about:
-      "MyNaijaMarket is a visually compelling frontend application designed to support the vibrant e-commerce culture in Nigeria. It features a responsive UI that enhances user engagement and streamlines the online shopping experience. Built with Next.js and Tailwind CSS, the platform prioritizes speed, accessibility, and clean design architecture to reflect a modern marketplace interface.",
+    id: 2,
+    slug: "blanksheet",
+    title: "Blanksheet LMS",
+    role: "Front-End Development · Responsive Design · Web Interactions",
+    liveLink: "https://www.blanksheet.co",
+    liveLinkLabel: "Blanksheet",
+    year: "2025",
+    image: "/assets/bla.svg",
+    overview:
+      "Blanksheet is a modern learning platform designed to deliver a fast, intuitive, and accessible digital learning experience. The project focused on building a responsive and scalable front-end architecture that brings the product's simplicity and functionality to life across devices.",
+    projectGoal:
+      "The objective was to build a high-performance, user-centric interface that caters to both students and institutions. The platform needed to feel smooth, reliable, and easy to navigate, while maintaining optimal performance and responsiveness.",
+    roleAndServices: [
+      "Front-End Development: Implemented the platform using React, leveraging component-based architecture for modularity and maintainability.",
+      "API Integration: Connected to RESTful APIs and GraphQL endpoints to dynamically fetch and manage content, ensuring real-time data updates.",
+      "Responsive Design: Developed a fully responsive UI with CSS-in-JS and media queries to ensure seamless experiences across desktops, tablets, and mobile devices.",
+      "UI Implementation: Translated high-fidelity designs into clean, reusable React components with a focus on accessibility and UX best practices.",
+      "Web Performance Optimisation: Applied code-splitting, lazy loading, and performance profiling to minimise load times and enhance runtime efficiency.",
+    ],
+    closing:
+      "I managed the front-end experience end-to-end, delivering a scalable, maintainable, and performant interface that aligns with Blanksheet's vision of simplicity and speed.",
+    prev: { slug: "atmosphere", label: "Atmosphere" },
+    next: { slug: "techbleat", label: "Techbleat" },
   },
-   {
-    id: "9",
-    title: "Techbleat Website",
-    description: "Amplifying tech discourse with sleek design and intuitive navigation.",
-    image: "/assets/tech.jpg",
-    tags: ["Frontend", "Tailwind", "Next.js"],
+  {
+    id: 3,
     slug: "techbleat",
-    demo: "https://techbleat.co.uk/",
-    github: "https://github.com/shashacodes/techbleat",
-    about:
-      "Techbleat is a platform built for tech enthusiasts to share insights and updates. This project combines aesthetics with performance using Next.js and Tailwind CSS. It features modular components, a responsive layout, and clean typography to support content-rich experiences.",
+    title: "Techbleat Website",
+    role: "Front-End Development · Responsive Design · Web Interactions",
+    liveLink: "https://techbleat.co.uk",
+    liveLinkLabel: "Techbleat",
+    year: "2024",
+    image: "/assets/bleat.svg",
+    overview:
+      "Techbleat is a tech media platform built to deliver fast, readable, and engaging content experiences. The project focused on building a performant marketing site and blog with clean editorial design.",
+    projectGoal:
+      "The goal was to create a content-first platform that felt premium and trustworthy. Fast page loads, readable typography, and mobile-first design were core priorities.",
+    roleAndServices: [
+      "Front-End Development: Built the site using Next.js with SSG for fast page delivery and excellent SEO.",
+      "Responsive Design: Implemented a mobile-first layout system using Tailwind CSS.",
+      "UI Implementation: Translated editorial design mockups into reusable components.",
+      "Performance: Optimised images, fonts, and scripts to achieve high Lighthouse scores.",
+    ],
+    closing:
+      "I delivered a polished, fast, and accessible marketing site that reflects Techbleat's brand and content strategy.",
+    prev: { slug: "blanksheet", label: "Blanksheet" },
   },
-  {
-    id: "10",
-    title: "Password Generator",
-    description: "JavaScript-powered password generator with customizable options.",
-    image: "/assets/pw.jpg",
-    tags: ["JavaScript", "Frontend"],
-    slug: "password-generator",
-    demo: "https://shashacodes.github.io/pwdgen/",
-    github: "https://github.com/shashacodes/pwdgen",
-    about:
-      "This project offers a client-side password generator that allows users to customize password strength by length and character types. It demonstrates core JavaScript skills, DOM manipulation, and UX design considerations for data privacy tools.",
-  },
-  {
-    id: "11",
-    title: "Birthday Countdown",
-    description: "Fun countdown timer for birthdays using JS.",
-    image: "/assets/bday.jpg",
-    tags: ["JavaScript", "Timer"],
-    slug: "birthday-countdown",
-    demo: "https://shashacodes.github.io/javascript-project/bday.html",
-    github: "https://github.com/shashacodes/javascript-project/blob/master/bday.html",
-    about:
-      "This countdown app adds a personal touch by allowing users to set and view the time left until a birthday. It's built with JavaScript to show real-time updates and offers fun, engaging interactions for users.",
-  },
-  {
-    id: "12",
-    title: "Blog Page",
-    description: "Clean blog page layout styled with Tailwind.",
-    image: "/assets/blogr.jpg",
-    tags: ["Tailwind", "Next.js"],
-    slug: "blog-page",
-    demo: "https://shashacodes.github.io/tailwind-6b2/index.html",
-    github: "https://github.com/shashacodes/tailwind-6b2",
-    about:
-      "The blog page is designed using Tailwind CSS and showcases a clean, minimalist layout ideal for content presentation. It highlights responsive design, modular components, and utility-first styling.",
-  },
-  {
-    id: "13",
-    title: "BMI Calculator",
-    description: "Calculate your Body Mass Index using JavaScript.",
-    image: "/assets/bmi.jpg",
-    tags: ["JavaScript", "Health"],
-    slug: "bmi-calculator",
-    demo: "https://shashacodes.github.io/javascript-project/bmi.html",
-    github: "https://github.com/shashacodes/javascript-project/blob/master/bmi.html",
-    about:
-      "The BMI Calculator is a lightweight tool that enables users to compute their Body Mass Index based on height and weight. It applies simple formulas and DOM manipulation to present results in a readable format.",
-  },
- 
-  // {
-  //   id: "15",
-  //   title: "Timer",
-  //   description: "Simple countdown timer using JavaScript.",
-  //   image: "/assets/timer.jpg",
-  //   tags: ["JavaScript", "UI"],
-  //   slug: "timer",
-  //   demo: "https://shashacodes.github.io/javascript-project/third%20javascript.html",
-  //   github: "https://github.com/shashacodes/javascript-project",
-  //   about:
-  //     "A basic yet functional countdown timer created with JavaScript. This project showcases event-driven programming and practical UI feedback mechanisms for user interaction.",
-  // },
-  // {
-  //   id: "16",
-  //   title: "API JSON Display",
-  //   description: "Delivering content using JSON API in React.",
-  //   image: "/assets/api.jpg",
-  //   tags: ["React", "API"],
-  //   slug: "json-api",
-  //   demo: "https://json-app.netlify.app/",
-  //   github: "https://github.com/shashacodes/json-app",
-  //   about:
-  //     "A practical project focused on consuming and displaying data from a JSON API using React. It shows how to handle asynchronous data fetching and render dynamic components based on API responses.",
-  // },
-  // {
-  //   id: "17",
-  //   title: "Grocery App",
-  //   description: "User-friendly online grocery shopping frontend with dynamic features.",
-  //   image: "/assets/groc.jpg",
-  //   tags: ["React", "Tailwind", "Capstone"],
-  //   slug: "grocery-app",
-  //   demo: "https://capstone-theta-eight.vercel.app/",
-  //   github: "https://github.com/shashacodes/capstone",
-  //   about:
-  //   "This is a capstone project that simulates an online grocery shopping experience. It provides an interactive UI for product browsing and cart management. Built with React and styled using Tailwind CSS, the app emphasizes usability and modern interface design.",
-  // },
-  // {
-  //   id: "19",
-  //   title: "HTML & CSS Markup",
-  //   description: "Basic static webpage built with only HTML and CSS.",
-  //   image: "/assets/markup.jpg",
-  //   tags: ["HTML", "CSS"],
-  //   slug: "html-css-markup",
-  //   demo: "https://shashacodes.github.io/frontend/html/markup.html",
-  //   github: "https://github.com/shashacodes/frontend",
-  //   about:
-  //     "This project presents a static webpage developed purely with semantic HTML and custom CSS. It's focused on foundational web development skills including layout structuring, typography, and responsive design without frameworks.",
-  // },
-
-
-
-  // {
-  //     id: "18",
-  //     title: "Signup Page",
-  //     description: "Modern signup form created with Next.js.",
-  //     image: "/assets/groc.jpg",
-  //     tags: ["Next.js", "Form"],
-  //     slug: "signup-page",
-  //     demo: "https://signup-delta.vercel.app/",
-  //     github: "https://github.com/shashacodes/signup",
-  //     about:
-  //     "A user registration page crafted with Next.js and styled for modern UX. It includes form validation, accessibility enhancements, and a clean interface that ensures seamless onboarding.",
-  //   },
-  //   {
-  //     id: "19,
-  //     title: "React Hooks Demo",
-  //     description: "Using useState, onChange and more in a simple form app.",
-  //     image: "/assets/use.png",
-  //     tags: ["React", "Hooks"],
-  //     slug: "react-hooks-demo",
-  //     demo: "https://json-app.netlify.app/better",
-  //     github: "https://github.com/shashacodes/json-app",
-  //     about:
-  //       "This demo project illustrates core React hooks like `useState` and `useEffect` within a simple form-based application. It demonstrates state management, form validation, and dynamic updates in a beginner-friendly structure.",
-  //   },
-  //   {
-  //     id: "20",
-  //     title: "Prompt List",
-  //     description: "Prompt-based item list created with JS.",
-  //     image: "/assets/groc.jpg",
-  //     tags: ["JavaScript", "Array"],
-  //     slug: "prompt-list",
-  //     demo: "https://shashacodes.github.io/javascript-project/array.html",
-  //     github: "https://github.com/shashacodes/javascript-project",
-  //     about:
-  //       "Prompt List is a basic application that captures user inputs via prompts and displays them in a list format. It's a simple but effective example of working with JavaScript arrays and user interaction.",
-  //   },
-]
+];

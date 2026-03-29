@@ -15,6 +15,8 @@ import DarkModeToggle from "@/app/components/button";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
+import { useDarkMode } from "@/app/components/hooks/useDarkMode";
+
 
 const projects = [
   {
@@ -42,13 +44,14 @@ const articles = [
 ];
 
 export default function HomePage() {
-  const [darkMode, setDarkMode] = useState(false);
-
+const { darkMode, toggleDarkMode } = useDarkMode();
   const bg = darkMode ? "bg-zinc-900 text-zinc-100" : "bg-[#f0efed] text-zinc-900";
   const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
   const card = darkMode ? "bg-zinc-800" : "bg-white";
   const border = darkMode ? "border-zinc-700" : "border-zinc-200";
   const rowHover = darkMode ? "hover:bg-zinc-800" : "hover:bg-zinc-100";
+
+  
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${bg}`}>
@@ -165,7 +168,7 @@ export default function HomePage() {
 
 
 <Footer darkMode={darkMode}
-  onToggle={() => setDarkMode(!darkMode)}
+  onToggle={toggleDarkMode}
  />
 
       </div>
