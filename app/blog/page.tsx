@@ -171,7 +171,7 @@ export default function BlogPage() {
                       <hr className={` mb-4 ${darkMode ? "border-zinc-700" : "border-zinc-300"}`} />
 {post.image && (
   <div className="relative py-6 overflow-visible ">
-    <div className="absolute z-50 sm:right-6 right-0 top-1/2 -translate-y-1/2 w-30 sm:w-40 h-20 sm:h-24 overflow-visible shrink-0 ">
+    <div className="absolute z-50 sm:right-6 right-0 top-1/2 -translate-y-1/2 w-20 sm:w-40 h-20 sm:h-24 overflow-visible shrink-0 ">
       <Image
         src={post.image}
         alt={post.title}
