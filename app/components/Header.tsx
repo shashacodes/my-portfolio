@@ -20,7 +20,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
   const muted = darkMode ? "text-zinc-400" : "text-zinc-500";
 
   return (
-    <header className="flex items-start justify-between p-6 mb-2 font-extrabold">
+    <header className="flex items-start justify-between py-6 mb-2 font-extrabold">
       <Image
         src="/assets/my-ai.jpeg"
         alt="Sharon Ibanga"
@@ -30,7 +30,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
         priority
       />
 
-      <nav className="flex items-center gap-3 mt-1">
+      <nav className="flex items-center md:gap-3 gap-1 mt-1">
         {navLinks.map(({ href, label, icon: icon, page }) => {
           const isActive = activePage === page;
           return isActive ? (
@@ -43,9 +43,9 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
         <Image
           src={icon}        
           alt={label}
-          width={14}
-          height={14}
-          className={darkMode ? "invert" : ""}
+          width={30}
+          height={30}
+          className={`w-[14px] h-[14px] md:w-[30px] md:h-[30px]  darkMode ? "invert" : "" `}
         />
             </div>
           ) : (
@@ -53,10 +53,10 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
                      <Image
           src={icon}        
           alt={label}
-          width={14}
-          height={14}
+          width={30}
+          height={30}
 
-                className={`${muted} opacity-50 hover:opacity-100 transition-opacity duration-300`}
+                className={` w-[14px] h-[14px] md:w-[30px] md:h-[30px] ${muted} opacity-50 hover:opacity-100 transition-opacity duration-300`}
               />
                   <span className="tooltip">{label}</span>
 
