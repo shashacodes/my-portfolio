@@ -1,7 +1,6 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import Image from "next/image";
 
 interface DarkModeToggleProps {
   darkMode: boolean;
@@ -19,13 +18,7 @@ export default function DarkModeToggle({ darkMode, onToggle }: DarkModeTogglePro
           : "bg-zinc-200 text-zinc-600 hover:bg-zinc-300"
       }`}
     >
-<Image
-  src={darkMode ? "/assets/darkmode.svg" : "/assets/darkmode.svg"}
-  alt={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-  width={12}
-  height={12}
-  className={darkMode ? "invert" : ""}
-/>      <div
+     <div
         className={`w-6 h-3.5 rounded-full relative transition-colors ${
           darkMode ? "bg-zinc-500" : "bg-zinc-400"
         }`}

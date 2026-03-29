@@ -9,11 +9,11 @@ interface HeaderProps {
 }
 
 const navLinks = [
-  { href: "/",         label: "Home",     icon: "/assets/home.svg", page: "home"},
-  { href: "/about",    label: "About",    icon: "/assets/user.svg", page: "about"    },
-  { href: "/projects", label: "Projects", icon: "/assets/project.svg", page: "projects" },
-  { href: "/blog",     label: "Blog",     icon: "/assets/Blogr.svg",  page: "blog"     },
-  { href: "/contact",  label: "Contact",  icon: "/assets/mail.svg",  page: "contact"  },
+  { href: "/",         label: "Home",     icon: "/assets/home.svg", page: "home",  dim: true},
+  { href: "/about",    label: "About",    icon: "/assets/about.svg", page: "about" , dim: true   },
+  { href: "/projects", label: "Projects", icon: "/assets/project.svg", page: "projects", dim: false },
+  { href: "/blog",     label: "Blog",     icon: "/assets/Blogr.svg",  page: "blog", dim: true    },
+  { href: "/contact",  label: "Contact",  icon: "/assets/mail.svg",  page: "contact", dim: false  },
 ] as const;
 
 export default function Header({ darkMode, activePage }: HeaderProps) {
@@ -31,7 +31,7 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
       />
 
       <nav className="flex items-center md:gap-3 gap-1 mt-1">
-        {navLinks.map(({ href, label, icon: icon, page }) => {
+        {navLinks.map(({ href, label, icon: icon, page, dim }) => {
           const isActive = activePage === page;
           return isActive ? (
             <div
@@ -56,7 +56,8 @@ export default function Header({ darkMode, activePage }: HeaderProps) {
           width={30}
           height={30}
 
-                className={` w-[14px] h-[14px] md:w-[30px] md:h-[30px] ${muted} opacity-50 hover:opacity-100 transition-opacity duration-300`}
+                className={` w-[14px] h-[14px] md:w-[30px] md:h-[30px]  ${dim ? "opacity-20 hover:opacity-100" : "opacity-50 hover:opacity-100"}
+`}
               />
                   <span className="tooltip">{label}</span>
 

@@ -44,7 +44,7 @@ const experience = [
     role: "Frontend Engineer",
   },
   {
-    company: "Unitvelocity",
+    company: "Univelcity",
     period: "January 2024 – December 2024",
     role: "Frontend Engineer Intern",
   },
