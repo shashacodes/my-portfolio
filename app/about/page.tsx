@@ -147,7 +147,7 @@ const bg = darkMode ? "bg-zinc-900" : "bg-[#f0efed]";
 
         <div className="flex justify-end mb-10">
           <a
-            href="/assets/Sharon_Ibanga_CV_2026 .pdf"
+            href="/assets/Sharon_Ibanga_CV_2026.pdf"
             download
             className={`inline-flex right-0 items-center gap-2  font-medium px-4 py-2.5 rounded-md transition-colors ${
               darkMode
